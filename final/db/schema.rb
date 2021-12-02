@@ -21,10 +21,22 @@ ActiveRecord::Schema.define(version: 2021_12_02_034548) do
     t.index ["team_id"], name: "index_rosters_on_team_id"
   end
 
+  create_table "school_classes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "sections", force: :cascade do |t|
     t.integer "sectionNum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "student_teamships", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "studentId"
+    t.integer "teamId"
   end
 
   create_table "students", force: :cascade do |t|
