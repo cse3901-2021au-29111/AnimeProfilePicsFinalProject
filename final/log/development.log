@@ -860,3 +860,154 @@ Processing by WelcomeController#newStd as HTML
 Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 3402)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTeams (20211202002055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tName" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTeams (20211202002055)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tName" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-12-05 18:37:49 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 104.2ms | Allocations: 5023)
+Completed 200 OK in 132ms (Views: 112.3ms | ActiveRecord: 0.0ms | Allocations: 10386)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 18:37:58 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 0.4ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 3136)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:38:04 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 4.6ms | Allocations: 5295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 8141)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 8656)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:38:14 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/welcome/newStd"):
+  
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:39:23 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 2.1ms | Allocations: 3403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 6365)
+Completed 200 OK in 27ms (Views: 26.7ms | Allocations: 6983)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:39:32 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"123", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2988)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 5833)
+Completed 200 OK in 8ms (Views: 6.9ms | Allocations: 6284)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:42:56 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 6180)
+Completed 200 OK in 30ms (Views: 29.4ms | Allocations: 6728)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:43:03 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"132", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 5832)
+Completed 200 OK in 37ms (Views: 36.7ms | Allocations: 6272)
+
+
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:44:04 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 2.4ms | Allocations: 3333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6180)
+Completed 200 OK in 17ms (Views: 15.9ms | Allocations: 6730)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:44:09 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"123", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5832)
+Completed 200 OK in 13ms (Views: 12.1ms | Allocations: 6272)
+
+
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:44:36 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.4ms | Allocations: 3222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 6245)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 7305)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:44:56 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"132", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5840)
+Completed 200 OK in 29ms (Views: 28.2ms | Allocations: 6282)
+
+
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
