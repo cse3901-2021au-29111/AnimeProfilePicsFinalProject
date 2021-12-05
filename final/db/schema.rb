@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_034548) do
+ActiveRecord::Schema.define(version: 2021_12_05_151408) do
+
+  create_table "evaluations", force: :cascade do |t|
+    t.integer "evaluator_id"
+    t.integer "evaluated_id"
+    t.string "comment"
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "labs", force: :cascade do |t|
+    t.string "lab_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "teams_id", null: false
+    t.index ["teams_id"], name: "index_labs_on_teams_id"
+  end
 
   create_table "rosters", force: :cascade do |t|
     t.integer "team_id"
@@ -21,22 +38,10 @@ ActiveRecord::Schema.define(version: 2021_12_02_034548) do
     t.index ["team_id"], name: "index_rosters_on_team_id"
   end
 
-  create_table "school_classes", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "sections", force: :cascade do |t|
     t.integer "sectionNum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "student_teamships", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "studentId"
-    t.integer "teamId"
   end
 
   create_table "students", force: :cascade do |t|
@@ -46,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_12_02_034548) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "section_id"
+    t.integer "is_admin"
     t.index ["section_id"], name: "index_students_on_section_id"
   end
 
@@ -57,4 +63,5 @@ ActiveRecord::Schema.define(version: 2021_12_02_034548) do
     t.index ["section_id"], name: "index_teams_on_section_id"
   end
 
+  add_foreign_key "labs", "teams", column: "teams_id"
 end
