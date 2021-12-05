@@ -860,3 +860,134 @@ Processing by WelcomeController#newStd as HTML
 Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 3402)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-05 17:19:55 -0500
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | Allocations: 5033)
+Completed 200 OK in 281ms (Views: 138.2ms | ActiveRecord: 0.0ms | Allocations: 7723)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 17:20:37 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 0.5ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3134)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 3680)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 17:20:54 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 0.4ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3071)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 3586)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 17:20:59 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2980)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3392)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 17:21:04 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2981)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 3393)
+
+
+Started GET "/welcome/newStd?fname=The&lname=Camster&buckID=123456" for 127.0.0.1 at 2021-12-05 17:21:15 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"fname"=>"The", "lname"=>"Camster", "buckID"=>"123456"}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 2982)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 3388)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 17:21:22 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2982)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3388)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 17:21:23 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 0.2ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3020)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3431)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 17:21:24 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 0.2ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3015)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3420)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2021-12-05 17:24:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/students/3"):
+  
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 17:24:07 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 2.5ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3170)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 3655)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2021-12-05 17:24:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/students/3/edit"):
+  
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 17:24:10 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 0.2ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3016)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3422)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 17:24:29 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2995)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3348)
+
+
