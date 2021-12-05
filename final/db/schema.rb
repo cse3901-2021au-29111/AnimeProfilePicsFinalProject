@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_230616) do
+ActiveRecord::Schema.define(version: 2021_12_02_034548) do
+
+  create_table "rosters", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "student_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_id"], name: "index_rosters_on_student_id"
+    t.index ["team_id"], name: "index_rosters_on_team_id"
+  end
 
   create_table "school_classes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.integer "sectionNum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,17 +42,19 @@ ActiveRecord::Schema.define(version: 2021_11_19_230616) do
   create_table "students", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
-    t.integer "buckId"
+    t.integer "buckID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "nick"
+    t.integer "section_id"
+    t.index ["section_id"], name: "index_students_on_section_id"
   end
 
   create_table "teams", force: :cascade do |t|
-    t.integer "classId"
-    t.integer "adminId"
+    t.string "tName"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "section_id"
+    t.index ["section_id"], name: "index_teams_on_section_id"
   end
 
 end

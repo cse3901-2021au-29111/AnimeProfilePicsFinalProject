@@ -1,5 +1,5 @@
 class Student < ApplicationRecord
-  has_many :teams,
-           limit: 2,
-           through: StudentTeamship
+  belongs_to :section
+  has_many :rosters
+  has_many :teams, :through => :rosters
 end
