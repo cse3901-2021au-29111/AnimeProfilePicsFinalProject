@@ -6560,3 +6560,83 @@ Processing by StudentController#index as HTML
 Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 5128)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-06 13:29:41 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 289)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 6176)
+Completed 200 OK in 59ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 12119)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:29:44 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:12
+  Rendered student/stdView.html.erb within layouts/application (Duration: 16.8ms | Allocations: 7317)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 10562)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.9ms | Allocations: 11078)
+
+
+Started GET "/student/1" for 127.0.0.1 at 2021-12-06 13:29:47 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:3
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 4547)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.5ms | Allocations: 5062)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:29:48 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:12
+  Rendered student/stdView.html.erb within layouts/application (Duration: 5.2ms | Allocations: 814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4054)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.1ms | Allocations: 4467)
+
+
+Started GET "/student/2" for 127.0.0.1 at 2021-12-06 13:29:49 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:3
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 3.5ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3927)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 4338)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:29:50 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:12
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.8ms | Allocations: 813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4053)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 4465)
+
+
