@@ -9,7 +9,8 @@
   <% @teams.each do |team| %>
     <tr>
       <td><%= team.tName %></td>
-      <td><a href = "/team/<%=team.id%>">show</a></td>
+      <td><a href = "/team/<%=team.id%>">Show</a></td>
+      <td><%= link_to "Edit", "/team/#{team.id}/edit"%></td>
       <td><%= link_to "Destroy", "/team/#{team.id}",
                       method: :delete,
                       data: { confirm: "Are you sure?" } %></td>

@@ -11,6 +11,10 @@
         <td>Email: <%=student.email%></td>
     </tr>
     <tr>
-      <td><a href = "/student/stdView">back</a></td>
+        <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
     </tr>
+    <tr>
+      <td><a href = "/student/stdView">Back</a></td>
+    </tr>
+
 </table>

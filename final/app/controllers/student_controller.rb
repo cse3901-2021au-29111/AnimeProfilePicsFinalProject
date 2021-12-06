@@ -12,7 +12,7 @@ class StudentController <  ApplicationController
   end
 
   def create
-    
+
     @student = Student.new(student_params)
     if @student.save
       flash[:success] = "You have successfully signed up!"
@@ -21,11 +21,11 @@ class StudentController <  ApplicationController
     else
       render 'newStd'
     end
-  
   end
-       def student_params
-          params.permit(:fname, :lname, :email, :password, :password_confirmation, :buckId)
-        end
+
+  def student_params
+    params.permit(:fname, :lname, :email, :password, :password_confirmation, :buckId)
+  end
 
   def destroy
     Student.find(params[:id]).destroy
@@ -39,11 +39,15 @@ class StudentController <  ApplicationController
   def update
     @student = Student.find(params[:id])
 
-    if @student.update(fname: params[:fname], lname: params[:lname], email: params[:email])
-      redirect_to student_stdView_path
+    if @student.update(student_update)
+      redirect_to @student,notice: "Update success"
     else
+      flash.now[:notice] = "try again"
       render :edit
     end
   end
-
+  private
+    def student_update
+      params.require(:student).permit(:fname, :lname, :email, :password, :password_confirmation, :buckId)
+    end
 end

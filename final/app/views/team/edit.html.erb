@@ -1,0 +1,11 @@
+<h1>Edit Team</h1>
+
+<%=form_with(model: @team, url: "/team/" + @team.id.to_s, local: true, method: "put") do |form| %>
+  <div>
+    <%= form.label :tName %>
+    <%= form.text_field :tName, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.submit "Update" %>
+  </div>
+<% end %>
