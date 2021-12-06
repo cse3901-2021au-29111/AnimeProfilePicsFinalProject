@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'student/newStd'
   get '/student/:id', to: 'student#currentStd'
   post "student/newStd", to: "student#create"
-
   get 'team/index'
   get 'team/newTeam'
   post 'team/newTeam', to: "team#create"
@@ -14,5 +13,5 @@ Rails.application.routes.draw do
   post 'roster/newRost', to: "roster#create"
 
   root to: "student#index"
-
+  resources :student
 end
