@@ -1,4 +1,4 @@
-class WelcomeController <  ApplicationController
+class StudentController <  ApplicationController
   def index
     @students = Student.all
   end
@@ -13,7 +13,7 @@ class WelcomeController <  ApplicationController
 
   def create
     Student.create(fname: params[:fname], lname: params[:lname], buckId: params[:buckId])
-    redirect_to welcome_stdView_path
+    redirect_to student_stdView_path
     # @student = Student.new(fname: params[:name], lname: "", buckId: "")
     #
     # if @student.save
