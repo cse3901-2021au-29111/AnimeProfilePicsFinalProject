@@ -16,14 +16,24 @@ class StudentController <  ApplicationController
     redirect_to student_stdView_path
   end
 
-  def edit
-  end
 
   def destroy
     Student.find(params[:id]).destroy
     redirect_to student_stdView_path
   end
 
-  def update
+  def edit
+    @student = Student.find(params[:id])
   end
+
+  def update
+    @student = Student.find(params[:id])
+
+    if @student.update(fname: params[:fname], lname: params[:lname], email: params[:email])
+      redirect_to student_stdView_path
+    else
+      render :edit
+    end
+  end
+
 end
