@@ -1,20 +1,70 @@
-<h1>Student</h1>
-<table>
-    <%student = Student.find(params[:id])%>
-    <tr>
-        <td>Fname: <%=student.fname%></td>
-    </tr>
-    <tr>
-        <td>lname: <%=student.lname%></td>
-    </tr>
-    <tr>
-        <td>Email: <%=student.email%></td>
-    </tr>
-    <tr>
-        <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
-    </tr>
-    <tr>
-      <td><a href = "/student/stdView">Back</a></td>
-    </tr>
 
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+<h2 style="text-align:center">Student Information</h2>
+
+<div class="card">
+    <%student = Student.find(params[:id])%>
+    <br>
+    <h1><%=student.fname%> <%=student.lname%></h1>
+    <p><%=student.email%></p>
+    <br>
+
+    <%= link_to "Edit", "/student/#{student.id}/edit"%>
+    <a href="/student/stdView"><button>Go Back</button></a>
+</div>
+</body>
+</html>

@@ -1,11 +1,35 @@
-<h1>Students</h1>
+<style>
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table tr {
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+</style>
+
+
+<h1>List of Students</h1>
 <% @students = Student.all %>
-<table>
+<table class="styled-table">
 
     <tr>
-        <th>Fname</th>
+        <th>First Name</th>
         <th colspan="1"></th>
-        <th>Lname</th>
+        <th>Last Name</th>
         <th>Email</th>
         <th colspan="5"></th>
     </tr>
@@ -15,8 +39,8 @@
         <td colspan="1"></th>
         <td><%= student.lname %></td>
         <td><%= student.email %></td>
-      <% if 1 %>
         <td><a href = "/student/<%=student.id%>">Show</td>
+        <% if logged_in? && @current_student.is_admin? %>
         <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
         <td><%= link_to "Destroy", "/student/#{student.id}",
                   method: :delete,
