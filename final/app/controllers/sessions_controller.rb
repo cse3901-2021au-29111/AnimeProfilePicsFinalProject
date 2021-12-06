@@ -8,10 +8,11 @@ class SessionsController < ApplicationController
       #redirect_to_student_index
       log_in student
       #redirect to students page
-    else
+      redirect_to root_path
+      else
       #need css for flash in sign up and login
       flash.now[:danger] = 'Invalid email/password combination'
-      render:new
+      render :new
     end
   end
 
