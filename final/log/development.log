@@ -5414,3 +5414,502 @@ Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4140)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:39:28 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 113.7ms | Allocations: 9316)
+Completed 200 OK in 269ms (Views: 139.6ms | ActiveRecord: 0.0ms | Allocations: 18957)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:39:43 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:12
+  Rendered student/stdView.html.erb within layouts/application (Duration: 43.1ms | Allocations: 7283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.6ms | Allocations: 10332)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 1.8ms | Allocations: 10849)
+
+
+Started GET "/student/1" for 127.0.0.1 at 2021-12-06 12:39:50 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:3
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 15.7ms | Allocations: 1696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 4747)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms | Allocations: 5262)
+
+
+Started GET "/student/2" for 127.0.0.1 at 2021-12-06 12:39:55 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:3
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 9.5ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3742)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 1.8ms | Allocations: 4155)
+
+
+Started GET "/student/3" for 127.0.0.1 at 2021-12-06 12:39:57 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:3
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 9.0ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 3742)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms | Allocations: 4154)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:39:59 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 60.7ms | Allocations: 7277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 10227)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 10741)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 12:40:12 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"the", "lname"=>"camster", "email"=>"123@gmail.com", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Create (12.6ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "created_at", "updated_at", "email") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "the"], ["lname", "camster"], ["created_at", "2021-12-06 17:40:12.152941"], ["updated_at", "2021-12-06 17:40:12.152941"], ["email", "123@gmail.com"]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 64ms (ActiveRecord: 22.8ms | Allocations: 6046)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:40:12 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:12
+  Rendered student/stdView.html.erb within layouts/application (Duration: 14.2ms | Allocations: 799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 3846)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.1ms | Allocations: 4252)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:41:10 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 43.4ms | Allocations: 15076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 18036)
+Completed 200 OK in 105ms (Views: 89.9ms | ActiveRecord: 2.7ms | Allocations: 19618)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/roster/newRost" for 127.0.0.1 at 2021-12-06 12:41:48 -0500
+Processing by RosterController#newRost as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/newRost.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/newRost.html.erb:7
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/roster/newRost.html.erb:13
+  Rendered roster/newRost.html.erb within layouts/application (Duration: 27.1ms | Allocations: 2145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 5190)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.2ms | Allocations: 5704)
+
+
+Started POST "/roster/newRost" for 127.0.0.1 at 2021-12-06 12:41:55 -0500
+Processing by RosterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team_id"=>"1", "student_ids"=>["1", "2", "3", "4"], "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mRoster Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rosters" WHERE "rosters"."student_id" = ? AND "rosters"."team_id" = ? LIMIT ?[0m  [["student_id", 1], ["team_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mRoster Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rosters" WHERE "rosters"."student_id" = ? AND "rosters"."team_id" = ? LIMIT ?[0m  [["student_id", 2], ["team_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mRoster Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rosters" WHERE "rosters"."student_id" = ? AND "rosters"."team_id" = ? LIMIT ?[0m  [["student_id", 3], ["team_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mRoster Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rosters" WHERE "rosters"."student_id" = ? AND "rosters"."team_id" = ? LIMIT ?[0m  [["student_id", 4], ["team_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mRoster Create (2.1ms)[0m  [1m[32mINSERT INTO "rosters" ("team_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 1], ["student_id", 4], ["created_at", "2021-12-06 17:41:55.299488"], ["updated_at", "2021-12-06 17:41:55.299488"]]
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (65.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/roster_controller.rb:16:in `block in create'
+Redirected to http://127.0.0.1:3000/roster/index
+Completed 302 Found in 247ms (ActiveRecord: 87.3ms | Allocations: 25694)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:41:55 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (2.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 38.5ms | Allocations: 3715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 6770)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 2.6ms | Allocations: 7189)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:43:05 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 3973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 7207)
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 3.9ms | Allocations: 8369)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:45:38 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 118.4ms | Allocations: 3977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 168.9ms | Allocations: 7210)
+Completed 200 OK in 193ms (Views: 191.4ms | ActiveRecord: 0.5ms | Allocations: 8366)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:48:21 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 3469)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 4628)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:48:24 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:12
+  Rendered student/stdView.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4061)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 4575)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-06 12:48:25 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:9
+  Rendered team/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 3956)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.1ms | Allocations: 4902)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:48:28 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 3977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 7034)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.6ms | Allocations: 7979)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:49:26 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3477)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 4637)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:49:53 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 3477)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4632)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:50:01 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3477)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4632)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:50:09 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3475)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 4630)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:50:26 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3481)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4643)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-06 12:51:15 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:9
+  Rendered team/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 930)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 4163)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.1ms | Allocations: 5328)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:51:19 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3298)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 4231)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-06 12:51:22 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:9
+  Rendered team/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 3819)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms | Allocations: 4243)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:51:27 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 3972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 7028)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.8ms | Allocations: 7971)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:51:56 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 3977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 7210)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.4ms | Allocations: 8365)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:52:03 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 3981)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 7215)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.6ms | Allocations: 8377)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:52:15 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 3977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 7210)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.6ms | Allocations: 8365)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:53:39 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 3979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 7212)
+Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 0.7ms | Allocations: 8367)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:53:49 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 3977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 7210)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.6ms | Allocations: 8365)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-06 12:54:01 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/roster/index.html.erb:13
+  Rendered roster/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 3982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 7228)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.8ms | Allocations: 8338)
+
+

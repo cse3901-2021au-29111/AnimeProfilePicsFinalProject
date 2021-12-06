@@ -5,18 +5,18 @@
   <% @teams = Team.all %>
   <% @students = Student.all %>
 
-<% @teams.each do |team| %>
-  <tr>
-    <th>
-      <%= team.tName %>:
-    </th>
-      <% team.students.each do |student| %>
-        <td>
-        <%= student.fname %> <%= student.lname %>,
-        </td>
-      <% end %>
-  </tr>
-<% end %>
+  <% @teams.each do |team| %>
+    <tr>
+      <th>
+        <%= team.tName %>
+      </th>
+        <% team.students.each do |student| %>
+          <td>
+            |<%= student.fname %> <%= student.lname %>
+          </td>
+        <% end %>
+    </tr>
+  <% end %>
 </table>
 <br>
-<%= link_to "new roster", roster_newRost_path %>
+<%= link_to "add students teams", roster_newRost_path %>
