@@ -3480,3 +3480,764 @@ Did you mean?  team_new_path):
     6:     <%= form.text_field :tName %>
   
 app/views/team/new.html.erb:3
+Started GET "/" for 127.0.0.1 at 2021-12-06 11:08:03 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 5367)
+Completed 200 OK in 85ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 11706)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:08:05 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 22.4ms | Allocations: 7230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 10198)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 1.6ms | Allocations: 10747)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:08:07 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 36.8ms | Allocations: 7563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 10425)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.0ms | Allocations: 10941)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:08:17 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"a", "lname"=>"a", "email"=>"123@a.com", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 22ms (ActiveRecord: 0.5ms | Allocations: 4578)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:08:17 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.7ms | Allocations: 742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3708)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 4114)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:09:21 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5840)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 6251)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:09:27 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"123aaa", "lname"=>"123aaa", "email"=>"123@a.com", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 35ms (ActiveRecord: 0.6ms | Allocations: 3953)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:09:27 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 2.9ms | Allocations: 740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3709)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 4115)
+
+
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:24:26 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 4833)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 1.1ms | Allocations: 5980)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:24:37 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.8ms | Allocations: 936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4080)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms | Allocations: 5223)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:24:46 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 11.9ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 4097)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.2ms | Allocations: 5243)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:25:03 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 4.7ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4095)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.1ms | Allocations: 5237)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:29:12 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 41.7ms | Allocations: 5909)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 5989)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.1ms | Allocations: 7105)
+
+
+  
+ActionView::Template::Error (undefined method `show' for #<Student:0x00007ff3f99915e8>):
+    15:         <td colspan="1"></th>
+    16:         <td><%= student.lname %></td>
+    17:         <td><%= student.email %></td>
+    18:         <td><%= student.show%>show</td>
+    19:         <td><%= student.update%>edit</td>
+    20:         <td><%= student.delete%>delete</td>
+    21:     </tr>
+  
+app/views/student/stdView.html.erb:18
+app/views/student/stdView.html.erb:5
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:30:41 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 16.2ms | Allocations: 3933)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4013)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms | Allocations: 5224)
+
+
+  
+ActionView::Template::Error (undefined method `show' for #<Student:0x00007ff3f92ac098>):
+    15:         <td colspan="1"></th>
+    16:         <td><%= student.lname %></td>
+    17:         <td><%= student.email %></td>
+    18:         <td onClick = <%= student.show%>>show</td>
+    19:         <td onClick = <%= student.show%>><%= student.update%>edit</td>
+    20:         <td onClick = <%= student.show%>><%= student.delete%>delete</td>
+    21:     </tr>
+  
+app/views/student/stdView.html.erb:18
+app/views/student/stdView.html.erb:5
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:32:00 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 23.0ms | Allocations: 4213)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 4293)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms | Allocations: 5410)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `show' for #<ActionView::Base:0x007ff3f8819d10>):
+    15:         <td colspan="1"></th>
+    16:         <td><%= student.lname %></td>
+    17:         <td><%= student.email %></td>
+    18:         <td onClick = <%= show%>>show</td>
+    19:         <td onClick = <%= show%>><%= student.update%>edit</td>
+    20:         <td onClick = <%= show%>><%= student.delete%>delete</td>
+    21:     </tr>
+  
+app/views/student/stdView.html.erb:18
+app/views/student/stdView.html.erb:5
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:34:28 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.3ms | Allocations: 977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4249)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 5406)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:34:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/12"):
+  
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:36:16 -0500
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:7:in `show'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.9ms | Allocations: 3287)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student without an ID):
+  
+app/controllers/student_controller.rb:7:in `show'
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:37:20 -0500
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:7:in `show'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:7:in `show'
+Completed 406 Not Acceptable in 27ms (ActiveRecord: 1.5ms | Allocations: 10833)
+
+
+  
+ActionController::MissingExactTemplate (StudentController#show is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:38:46 -0500
+  
+SyntaxError (/home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+    <%=link_to "Patient Record", p...
+    ^
+/home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:12: syntax error, unexpected tCONSTANT, expecting end
+    @student = Student.new
+               ^~~~~~~):
+  
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:12: syntax error, unexpected tCONSTANT, expecting end
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:12: syntax error, unexpected tCONSTANT, expecting end
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:12: syntax error, unexpected tCONSTANT, expecting end
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:39:24 -0500
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:7:in `show'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:7:in `show'
+Completed 406 Not Acceptable in 24ms (ActiveRecord: 1.4ms | Allocations: 9542)
+
+
+  
+ActionController::MissingExactTemplate (StudentController#show is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:40:31 -0500
+  
+SyntaxError (/home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+    <br>
+    ^
+/home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:14: syntax error, unexpected tCONSTANT, expecting end
+    @student = Student.new
+               ^~~~~~~):
+  
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:14: syntax error, unexpected tCONSTANT, expecting end
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:14: syntax error, unexpected tCONSTANT, expecting end
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:14: syntax error, unexpected tCONSTANT, expecting end
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:40:45 -0500
+  
+SyntaxError (/home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+    <%= link_to "student log in", ...
+    ^
+/home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:13: syntax error, unexpected tCONSTANT, expecting end
+    @student = Student.new
+               ^~~~~~~):
+  
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:13: syntax error, unexpected tCONSTANT, expecting end
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:13: syntax error, unexpected tCONSTANT, expecting end
+app/controllers/student_controller.rb:8: syntax error, unexpected '<', expecting end
+app/controllers/student_controller.rb:13: syntax error, unexpected tCONSTANT, expecting end
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:41:10 -0500
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:7:in `show'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.3ms | Allocations: 11202)
+
+
+  
+NoMethodError (undefined method `link_to' for #<StudentController:0x0055b5cb952bb8>):
+  
+app/controllers/student_controller.rb:8:in `show'
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:41:27 -0500
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:7:in `show'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:7:in `show'
+Completed 406 Not Acceptable in 29ms (ActiveRecord: 3.1ms | Allocations: 9512)
+
+
+  
+ActionController::MissingExactTemplate (StudentController#show is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:51:16 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 17.5ms | Allocations: 3437)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 3517)
+Completed 500 Internal Server Error in 22ms (Allocations: 4554)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student' for #<ActionView::Base:0x007ff3f8b848d8>):
+    1: <table>
+    2:     <td>Fname: <%=student.fname%></td>
+    3:     <td>Fname: <%=student.lname%></td>
+    4:     <td>Fname: <%=student.email%></td>
+    5: </table>
+  
+app/views/student/currentStd.html.erb:2
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:52:41 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1451)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1531)
+Completed 500 Internal Server Error in 5ms (Allocations: 2562)
+
+
+  
+ActionView::Template::Error (undefined method `fname' for nil:NilClass):
+    1: <table>
+    2:     <td>Fname: <%=@student.fname%></td>
+    3:     <td>Fname: <%=@student.lname%></td>
+    4:     <td>Fname: <%=@student.email%></td>
+    5: </table>
+  
+app/views/student/currentStd.html.erb:2
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:55:22 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1471)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1551)
+Completed 500 Internal Server Error in 5ms (Allocations: 2582)
+
+
+  
+ActionView::Template::Error (undefined method `fname' for nil:NilClass):
+    1: <table>
+    2:     <%=student = @student%>
+    3:     <td>Fname: <%=student.fname%></td>
+    4:     <td>lname: <%=student.lname%></td>
+    5:     <td>Email: <%=student.email%></td>
+    6: </table>
+  
+app/views/student/currentStd.html.erb:3
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:55:49 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/currentStd.html.erb:2
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 35.0ms | Allocations: 10465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 13507)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.8ms | Allocations: 14568)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:57:25 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 2.9ms | Allocations: 814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3951)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 5007)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:57:55 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 5.1ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3952)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 5008)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:58:30 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 3.9ms | Allocations: 821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3958)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 5014)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:58:33 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 2.6ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3639)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 4045)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:59:16 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 6.3ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3962)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 5018)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:59:30 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 3.0ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3962)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 5018)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:59:31 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 2.4ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3640)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 4047)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 11:59:50 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:2
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 3.6ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3968)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 5029)
+
+
