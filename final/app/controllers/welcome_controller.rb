@@ -12,15 +12,17 @@ class WelcomeController <  ApplicationController
   end
 
   def create
-    @student = Student.new(fname: "...", lname: "...", buckId: "...")
-
-    if @student.save
-      puts("a")
-      redirect_to "http://google.com"
-    else
-      puts("b")
-      render :new
-    end
+    Student.create(fname: params[:fname], lname: params[:lname], buckId: params[:buckId])
+    redirect_to welcome_stdView_path
+    # @student = Student.new(fname: params[:name], lname: "", buckId: "")
+    #
+    # if @student.save
+    #   puts("a")
+    #   redirect_to welcome_stdView_path
+    # else
+    #   puts("b")
+    #   render :new
+    # end
   end
 
   def stdView
