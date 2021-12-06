@@ -1,0 +1,18 @@
+<h1>New Roster</h1>
+
+<%= form_with model: @roster do |form| %>
+  <div>
+    <%= form.label :student_id %><br>
+    <%= form.text_field :student_id %>
+  </div>
+
+  <div>
+    <%= form.label :team_id %><br>
+    <%= form.text_field :team_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>

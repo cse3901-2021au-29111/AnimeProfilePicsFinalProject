@@ -2,14 +2,16 @@
 
 <table>
   <% @teams = Team.all %>
-  <% @teams.each do |team| %>
+
     <tr>
       <th>Name</th>
     </tr>
+  <% @teams.each do |team| %>
     <tr>
+
       <td><%= team.tName %></td>
     </tr>
   <% end %>
 </table>
 <br>
-<%= link_to "new team", team_new_path %>
+<%= link_to "new team", team_newTeam_path %>
