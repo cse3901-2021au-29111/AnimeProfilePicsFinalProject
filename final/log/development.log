@@ -1011,3 +1011,357 @@ Completed 200 OK in 29ms (Views: 28.2ms | Allocations: 6282)
 
 
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:53:24 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"123", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5832)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 6272)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:55:33 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"123", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.5ms | Allocations: 3327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 6174)
+Completed 200 OK in 13ms (Views: 12.5ms | Allocations: 6759)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:58:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20211205135757_create_labs.rb
+20211205135919_add_team_ref_to_labs.rb
+20211205150923_add_is_admin_to_students.rb
+20211205151408_create_evaluations.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.4.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2021-12-05 18:58:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLabs (20211205135757)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "labs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lab_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211205135757"]]
+  [1m[36mTRANSACTION (59.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTeamRefToLabs (20211205135919)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alabs" ("id" integer NOT NULL PRIMARY KEY, "lab_name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "alabs" ("id","lab_name","created_at","updated_at")
+                     SELECT "id","lab_name","created_at","updated_at" FROM "labs"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "labs" ("id" integer NOT NULL PRIMARY KEY, "lab_name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "labs" ("id","lab_name","created_at","updated_at")
+                     SELECT "id","lab_name","created_at","updated_at" FROM "alabs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alabs"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_labs_on_teams_id" ON "labs" ("teams_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alabs" ("id" integer NOT NULL PRIMARY KEY, "lab_name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_alabs_on_teams_id" ON "alabs" ("teams_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "alabs" ("id","lab_name","created_at","updated_at","teams_id")
+                     SELECT "id","lab_name","created_at","updated_at","teams_id" FROM "labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "labs" ("id" integer NOT NULL PRIMARY KEY, "lab_name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL, CONSTRAINT "fk_rails_f04a5583a9"
+FOREIGN KEY ("teams_id")
+  REFERENCES "teams" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_labs_on_teams_id" ON "labs" ("teams_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "labs" ("id","lab_name","created_at","updated_at","teams_id")
+                     SELECT "id","lab_name","created_at","updated_at","teams_id" FROM "alabs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alabs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211205135919"]]
+  [1m[36mTRANSACTION (57.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIsAdminToStudents (20211205150923)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.3ms)[0m  [1m[35mALTER TABLE "students" ADD "is_admin" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211205150923"]]
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvaluations (20211205151408)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "evaluator_id" integer, "evaluated_id" integer, "comment" varchar, "rating" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211205151408"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:58:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.3ms | Allocations: 3333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 6180)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 6733)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 18:59:12 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"123", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6175)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 6760)
+
+
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:01:37 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.8ms | Allocations: 3329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6175)
+Completed 200 OK in 13ms (Views: 12.2ms | Allocations: 6723)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:01:42 -0500
+Processing by WelcomeController#newStd as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cam", "lname"=>"M", "buckID"=>"123", "commit"=>"Save "}
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 5832)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 6272)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:04:02 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6168)
+Completed 200 OK in 15ms (Views: 13.6ms | Allocations: 6718)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:04:09 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"ca", "lname"=>"m", "buckID"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.8ms | Allocations: 7630)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'buckID' for Student.):
+  
+app/controllers/welcome_controller.rb:15:in `create'
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:04:50 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 6577)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 7645)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:04:52 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"ca", "lname"=>"m", "buckId"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.9ms | Allocations: 12187)
+
+
+  
+ActionView::MissingTemplate (Missing template welcome/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/cmillar/RubymineProjects/AnimeProfilePicsFinalProject/final/app/views"
+  * "/home/cmillar/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/cmillar/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+  
+app/controllers/welcome_controller.rb:22:in `create'
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:05:36 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 6168)
+Completed 200 OK in 25ms (Views: 23.8ms | Allocations: 6716)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:05:39 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"ca", "lname"=>"m", "buckId"=>"1", "commit"=>"Save "}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mStudent Create (12.4ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "..."], ["lname", "..."], ["buckId", 0], ["created_at", "2021-12-06 00:05:39.336573"], ["updated_at", "2021-12-06 00:05:39.336573"]]
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 27.0ms | Allocations: 11586)
+
+
+  
+NoMethodError (undefined method `student_url' for #<WelcomeController:0x007f9af09a7b48>):
+  
+app/controllers/welcome_controller.rb:19:in `create'
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:06:12 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 6168)
+Completed 200 OK in 30ms (Views: 17.4ms | Allocations: 6717)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:06:14 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"ca", "lname"=>"m", "buckId"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mStudent Create (5.2ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "..."], ["lname", "..."], ["buckId", 0], ["created_at", "2021-12-06 00:06:14.309876"], ["updated_at", "2021-12-06 00:06:14.309876"]]
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (39.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000welcome/stdView
+Completed 302 Found in 66ms (ActiveRecord: 45.0ms | Allocations: 11239)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:06:51 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.9ms | Allocations: 3318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 6164)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 6712)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:06:54 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"ca", "lname"=>"m", "buckId"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mStudent Create (28.4ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "..."], ["lname", "..."], ["buckId", 0], ["created_at", "2021-12-06 00:06:54.752098"], ["updated_at", "2021-12-06 00:06:54.752098"]]
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000welcome#index
+Completed 302 Found in 105ms (ActiveRecord: 49.4ms | Allocations: 11192)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:08:01 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 1.8ms | Allocations: 3321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6168)
+Completed 200 OK in 12ms (Views: 11.5ms | Allocations: 6716)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:08:03 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"ca", "lname"=>"m", "buckId"=>"1", "commit"=>"Save "}
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mStudent Create (0.9ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "..."], ["lname", "..."], ["buckId", 0], ["created_at", "2021-12-06 00:08:04.005732"], ["updated_at", "2021-12-06 00:08:04.005732"]]
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/welcome_controller.rb:17:in `create'
+Redirected to http://google.com
+Completed 302 Found in 58ms (ActiveRecord: 30.1ms | Allocations: 9755)
+
+
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 19:08:19 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5823)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 6228)
+
+

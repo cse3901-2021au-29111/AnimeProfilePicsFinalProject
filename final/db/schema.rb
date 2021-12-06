@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_230616) do
+ActiveRecord::Schema.define(version: 2021_12_05_151408) do
+
+  create_table "evaluations", force: :cascade do |t|
+    t.integer "evaluator_id"
+    t.integer "evaluated_id"
+    t.string "comment"
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "labs", force: :cascade do |t|
+    t.string "lab_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "teams_id", null: false
+    t.index ["teams_id"], name: "index_labs_on_teams_id"
+  end
 
   create_table "school_classes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -31,6 +48,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_230616) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "nick"
+    t.integer "is_admin"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -40,4 +58,5 @@ ActiveRecord::Schema.define(version: 2021_11_19_230616) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "labs", "teams", column: "teams_id"
 end

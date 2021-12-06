@@ -12,11 +12,13 @@ class WelcomeController <  ApplicationController
   end
 
   def create
-    @student = Student.new(fname: "...", lname: "...", buckID: "...")
+    @student = Student.new(fname: "...", lname: "...", buckId: "...")
 
     if @student.save
-      redirect_to @student
+      puts("a")
+      redirect_to "http://google.com"
     else
+      puts("b")
       render :new
     end
   end
