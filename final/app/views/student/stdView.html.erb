@@ -17,6 +17,7 @@
         <td><%= student.email %></td>
       <% if 1 %>
         <td><a href = "/student/<%=student.id%>">show</td>
+        <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
         <td><%= link_to "Destroy", "/student/#{student.id}",
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></td>

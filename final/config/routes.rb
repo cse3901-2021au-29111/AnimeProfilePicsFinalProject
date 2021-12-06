@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'roster/newRost'
   get 'roster/:id', to: 'roster#currentRost'
   post 'roster/newRost', to: "roster#create"
+  delete 'roster/:id', to: 'roster#destroy'
 
   #Routes for sessions
   get '/login', to: 'sessions#new'
@@ -26,5 +27,5 @@ Rails.application.routes.draw do
 
 
   root to: "student#index"
-  #resources :student
+  resources :student
 end
