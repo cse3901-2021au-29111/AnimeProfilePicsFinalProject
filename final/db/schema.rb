@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_022731) do
+ActiveRecord::Schema.define(version: 2021_12_06_030421) do
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_022731) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "section_id"
+    t.string "tName"
     t.index ["section_id"], name: "index_teams_on_section_id"
   end
 
