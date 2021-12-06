@@ -17,4 +17,12 @@ class RosterController <  ApplicationController
     end
     redirect_to roster_index_path
   end
+
+  def update
+
+  end
+
+  def edit
+
+  end
 end
