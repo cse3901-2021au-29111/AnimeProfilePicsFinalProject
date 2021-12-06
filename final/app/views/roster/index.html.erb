@@ -2,11 +2,23 @@
 
 <table>
   <% @rosters = Roster.all %>
+  <% @teams = Team.all %>
+  <% @students = Student.all %>
+
 
   <tr>
-    <th>Std ID</th>
-    <th>Team ID</th>
+  <% @teams.each do |team| %>
+    <th>
+      <%= team.tName %>
+    </th>
+      <% team.students.each do |student| %>
+        <td>
+        <%= student.fname %>
+        </td>
+      <% end %>
+  <% end %>
   </tr>
+
 
   <% @rosters.each do |roster| %>
   <tr>

@@ -12,10 +12,6 @@ Rails.application.routes.draw do
   get 'roster/newRost'
   post 'roster/newRost', to: "roster#create"
 
-  #Routes for updating the roster
-  get 'roster/selectCheckboxes'
-  post 'roster/selectCheckboxes', to: "roster#create"
-
   root to: "student#index"
 
 end
