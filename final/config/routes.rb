@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'student/stdView'
   get 'student/newStd'
@@ -17,6 +18,16 @@ Rails.application.routes.draw do
   get 'roster/:id', to: 'roster#currentRost'
   post 'roster/newRost', to: "roster#create"
 
+  #Routes for updating the roster
+  get 'roster/selectCheckboxes'
+  post 'roster/selectCheckboxes', to: "roster#create"
+
+  #Routes for sessions
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
+
   root to: "student#index"
-  resources :student
+  #resources :student
 end

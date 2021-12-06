@@ -5414,12 +5414,18 @@ Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4140)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2021-12-06 12:39:28 -0500
   [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+=======
+Started GET "/" for 127.0.0.1 at 2021-12-06 13:24:37 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+>>>>>>> 3534eefea6878ca750053d0dc12c22d76ae529dc
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by StudentController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering student/index.html.erb within layouts/application
+<<<<<<< HEAD
   Rendered student/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 480)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layout layouts/application.html.erb (Duration: 113.7ms | Allocations: 9316)
@@ -5427,10 +5433,20 @@ Completed 200 OK in 269ms (Views: 139.6ms | ActiveRecord: 0.0ms | Allocations: 1
 
 
 Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:39:43 -0500
+=======
+  Rendered student/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 109.6ms | Allocations: 16391)
+Completed 200 OK in 186ms (Views: 115.9ms | ActiveRecord: 0.0ms | Allocations: 21937)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:24:39 -0500
+>>>>>>> 3534eefea6878ca750053d0dc12c22d76ae529dc
 Processing by StudentController#stdView as HTML
   Rendering layout layouts/application.html.erb
   Rendering student/stdView.html.erb within layouts/application
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+<<<<<<< HEAD
   ↳ app/views/student/stdView.html.erb:12
   Rendered student/stdView.html.erb within layouts/application (Duration: 43.1ms | Allocations: 7283)
 [Webpacker] Everything's up-to-date. Nothing to do
@@ -8492,3 +8508,753 @@ Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 454
   [1m[36mRoster Load (0.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" ORDER BY "rosters"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+=======
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 37.0ms | Allocations: 7270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 10332)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.9ms | Allocations: 10885)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 13:24:42 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 12.5ms | Allocations: 7569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 10524)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 11048)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 13:25:14 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"random", "lname"=>"student", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"22233", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 912)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Student.):
+  
+app/controllers/student_controller.rb:16:in `create'
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 13:26:36 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"random", "lname"=>"student", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"22233", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Create (4.6ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "random"], ["lname", "student"], ["buckId", 22233], ["created_at", "2021-12-06 18:26:36.663131"], ["updated_at", "2021-12-06 18:26:36.663131"], ["email", "buck1@gmail.com"], ["password_digest", "$2a$12$rKY7/jZp4lgDZx9dvN4Dhe5EjLOKfJ.fcGCmL7ImJflerUAnF/5Um"]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 463ms (ActiveRecord: 26.0ms | Allocations: 15385)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:26:36 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 4.5ms | Allocations: 864)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 4048)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.2ms | Allocations: 4654)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToTeam (20211206030421)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "classId" integer DEFAULT NULL, "adminId" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "section_id" integer DEFAULT NULL, "tName" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_section_id" ON "ateams" ("section_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ateams" ("id","classId","adminId","created_at","updated_at","section_id","tName")
+                     SELECT "id","classId","adminId","created_at","updated_at","section_id","tName" FROM "teams"[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "classId" integer DEFAULT NULL, "adminId" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "section_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_section_id" ON "teams" ("section_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "teams" ("id","classId","adminId","created_at","updated_at","section_id")
+                     SELECT "id","classId","adminId","created_at","updated_at","section_id" FROM "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (4.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20211206030421"]]
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToTeam (20211206030421)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "teams" ADD "tName" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211206030421"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-12-06 13:44:07 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 269.4ms | Allocations: 18347)
+Completed 200 OK in 348ms (Views: 288.8ms | ActiveRecord: 0.0ms | Allocations: 23987)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:44:11 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 56.0ms | Allocations: 7292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 10416)
+Completed 200 OK in 74ms (Views: 70.4ms | ActiveRecord: 2.7ms | Allocations: 10970)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 13:44:13 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 13.9ms | Allocations: 7574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 10590)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 11114)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 13:45:44 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 6005)
+Completed 200 OK in 100ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 11645)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:45:46 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 40.9ms | Allocations: 7290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 10413)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.8ms | Allocations: 10966)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 13:45:52 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 15.7ms | Allocations: 7607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 10623)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms | Allocations: 11147)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:45:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 776)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 3896)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms | Allocations: 4849)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 13:46:03 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5459)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 8475)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 8895)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:46:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3509)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 3929)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:46:29 -0500
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for SessionsController
+Did you mean?  new):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-12-06 13:54:09 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 6005)
+Completed 200 OK in 91ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 11644)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 13:54:11 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 41.5ms | Allocations: 7290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 10413)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.9ms | Allocations: 10966)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 13:54:13 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 11.8ms | Allocations: 7607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 10623)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 11147)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:54:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 3815)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 4768)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:54:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 263ms (ActiveRecord: 0.2ms | Allocations: 2622)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:54:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3511)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3927)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:54:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 321ms (ActiveRecord: 0.1ms | Allocations: 931)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:55:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3500)
+Completed 200 OK in 20ms (Views: 19.1ms | Allocations: 4060)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:55:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 4.0ms | Allocations: 12068)
+
+
+  
+NoMethodError (undefined method `redirect' for #<SessionsController:0x00556f248b6da0>
+Did you mean?  redirect_to):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:55:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 1.4ms | Allocations: 10212)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:55:36 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3703)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 4312)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:56:19 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3499)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 4057)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:56:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 2.5ms | Allocations: 12194)
+
+
+  
+NameError (undefined local variable or method `redirect_to_student_index' for #<SessionsController:0x007f719c0b1610>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 13:58:26 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 8306)
+Completed 200 OK in 115ms (Views: 89.3ms | ActiveRecord: 0.0ms | Allocations: 11096)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:58:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 3521)
+Completed 200 OK in 500ms (Views: 22.5ms | ActiveRecord: 1.8ms | Allocations: 14119)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:58:38 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3510)
+Completed 200 OK in 466ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 4549)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 13:58:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3513)
+Completed 200 OK in 425ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 4566)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:00:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3510)
+Completed 200 OK in 439ms (Views: 22.5ms | ActiveRecord: 0.2ms | Allocations: 4550)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:01:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3510)
+Completed 200 OK in 420ms (Views: 17.2ms | ActiveRecord: 0.1ms | Allocations: 4547)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-12-06 14:03:48 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 8306)
+Completed 200 OK in 101ms (Views: 60.3ms | ActiveRecord: 0.0ms | Allocations: 11095)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:03:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3520)
+Completed 200 OK in 381ms (Views: 17.7ms | ActiveRecord: 2.9ms | Allocations: 14112)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:03:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 398ms (ActiveRecord: 0.2ms | Allocations: 2164)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 14:05:10 -0500
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 6005)
+Completed 200 OK in 53ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 11644)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 14:05:15 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 41.8ms | Allocations: 7290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 10413)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.8ms | Allocations: 10966)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 14:05:16 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 14.7ms | Allocations: 7607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 10623)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms | Allocations: 11147)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 14:05:18 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 3815)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 4768)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:05:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3510)
+Completed 200 OK in 431ms (Views: 20.7ms | ActiveRecord: 0.2ms | Allocations: 5029)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 14:11:44 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 6005)
+Completed 200 OK in 126ms (Views: 74.4ms | ActiveRecord: 0.0ms | Allocations: 11636)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 14:11:46 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:11
+  Rendered student/stdView.html.erb within layouts/application (Duration: 43.3ms | Allocations: 7288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.6ms | Allocations: 10411)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.9ms | Allocations: 10956)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 14:11:47 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 17.8ms | Allocations: 7607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 10623)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 11139)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 14:11:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 3816)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 4761)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:11:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 0.2ms | Allocations: 3492)
+
+
+  
+NoMethodError (undefined method `student_url' for #<SessionsController:0x007fe5154b1d90>
+Did you mean?  student_newStd_url):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:12:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 1.4ms | Allocations: 12636)
+
+
+  
+NameError (undefined local variable or method `redirect_to_student_newStd_url' for #<SessionsController:0x007fe5158df070>):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:12:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 1.4ms | Allocations: 12219)
+
+
+  
+NameError (undefined local variable or method `redirect_to_student_newStd' for #<SessionsController:0x0055adf35934f8>):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:12:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 361ms (ActiveRecord: 1.6ms | Allocations: 12215)
+
+
+  
+NoMethodError (undefined method `redirect_to_url' for #<SessionsController:0x0055adf5198860>
+Did you mean?  redirect_to):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:13:17 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 1.5ms | Allocations: 12358)
+
+
+  
+NameError (undefined local variable or method `redirect_to_student_index' for #<SessionsController:0x007fe51c0256a8>):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:13:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 1.2ms | Allocations: 12345)
+
+
+  
+NameError (undefined local variable or method `redirect_to_student_newStd' for #<SessionsController:0x007fe51c105a00>):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:13:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 2.8ms | Allocations: 12370)
+
+
+  
+NameError (undefined local variable or method `redirect_to_new' for #<SessionsController:0x007fe5157e1358>
+Did you mean?  redirect_to):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:14:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 263ms (ActiveRecord: 1.4ms | Allocations: 10786)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:14:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 432ms (ActiveRecord: 0.1ms | Allocations: 936)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-06 14:15:43 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"buck1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 1.6ms | Allocations: 12143)
+
+
+  
+NoMethodError (undefined method `student_url' for #<SessionsController:0x007fe51c11fe28>
+Did you mean?  student_newStd_url):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+>>>>>>> 3534eefea6878ca750053d0dc12c22d76ae529dc
