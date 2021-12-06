@@ -1,4 +1,3 @@
-
 <h1>New Student</h1>
 
 <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
@@ -41,5 +40,5 @@
       <%= form.submit "Create Account" %>
     </div>
 
-    <p>Existing user? <%= link_to "login up now!", sessions_new_path %></p>
+    <p>Existing user? <%= link_to "login up now!", session_new_path %></p>
 <% end %>

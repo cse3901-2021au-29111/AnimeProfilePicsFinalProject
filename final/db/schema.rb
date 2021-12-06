@@ -3,14 +3,14 @@
 # incrementally modify your database, and then regenerate this schema definition.
 #
 # This file is the source Rails uses to define your schema when running `bin/rails
-# db:schema:load`. When creating a loginPage database, `bin/rails db:schema:load` tends to
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_030421) do
+ActiveRecord::Schema.define(version: 2021_12_06_224309) do
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"
@@ -47,6 +47,11 @@ ActiveRecord::Schema.define(version: 2021_12_06_030421) do
 
   create_table "sections", force: :cascade do |t|
     t.integer "sectionNum"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sessions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
