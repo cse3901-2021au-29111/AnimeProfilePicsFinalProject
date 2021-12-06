@@ -75,7 +75,4 @@ ActiveRecord::Schema.define(version: 2021_12_06_030421) do
     t.index ["section_id"], name: "index_teams_on_section_id"
   end
 
-  add_foreign_key "evaluations", "labs", column: "labs_id"
-  add_foreign_key "team_labs", "labs", column: "labs_id"
-  add_foreign_key "team_labs", "teams", column: "teams_id"
 end
