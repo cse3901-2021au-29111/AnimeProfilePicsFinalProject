@@ -6,8 +6,9 @@
     <tr>
       <th>Name</th>
     </tr>
+  <% @teams.each do |team| %>
     <tr>
-      <% @teams.each do |team| %>
+
       <td><%= team.tName %></td>
     </tr>
   <% end %>
