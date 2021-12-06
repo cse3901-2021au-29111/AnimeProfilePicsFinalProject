@@ -5317,3 +5317,420 @@ Processing by StudentController#stdView as HTML
 Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms | Allocations: 4256)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-06 11:44:43 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 5018)
+Completed 200 OK in 155ms (Views: 77.9ms | ActiveRecord: 0.0ms | Allocations: 10678)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:44:45 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 47.9ms | Allocations: 7388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 10342)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 1.7ms | Allocations: 10897)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:44:47 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 7.8ms | Allocations: 2042)
+  Rendered student/newStd.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2708)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 2789)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3283)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: # Taken directly from the textbook
+    2: <% if @user.errors.any? %>
+    3: <div id="error_explanation">
+    4: <div class="alert alert-danger">
+    5: The form contains <%= pluralize(@user.errors.count, "error") %>.
+  
+app/views/shared/_error_messages.html.erb:2
+app/views/student/newStd.html.erb:5
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:55:38 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 10.5ms | Allocations: 2014)
+  Rendered student/newStd.html.erb within layouts/application (Duration: 21.6ms | Allocations: 2814)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2899)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms | Allocations: 5322)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: # # Taken directly from the textbook
+    2: # <% if @user.errors.any? %>
+    3: # <div id="error_explanation">
+    4: # <div class="alert alert-danger">
+    5: # The form contains <%= pluralize(@user.errors.count, "error") %>.
+  
+app/views/shared/_error_messages.html.erb:2
+app/views/student/newStd.html.erb:5
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:56:01 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1848)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 2980)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/views"
+  * "/home/grao/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/grao/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    2: <h1>New Student</h1>
+    3: 
+    4: <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
+    5:   <%= render 'shared/error_messages' %>  
+    6: 
+    7: 
+    8:     <div>
+  
+app/views/student/newStd.html.erb:5
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:56:37 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1741)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1822)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 2863)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/views"
+  * "/home/grao/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/grao/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    2: <h1>New Student</h1>
+    3: 
+    4: <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
+    5:   # <%= render 'shared/error_messages' %>  
+    6: 
+    7: 
+    8:     <div>
+  
+app/views/student/newStd.html.erb:5
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:56:44 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1106)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1188)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1570)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/views"
+  * "/home/grao/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/grao/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    2: <h1>New Student</h1>
+    3: 
+    4: <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
+    5:   # <%= render 'shared/error_messages' %>  
+    6: 
+    7: 
+    8:     <div>
+  
+app/views/student/newStd.html.erb:5
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:57:03 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 32.8ms | Allocations: 9679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 14317)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms | Allocations: 15397)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:57:41 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"student ", "lname"=>"ten", "email"=>"sd10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123756", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 123756], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "sd10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Create (18.9ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "student "], ["lname", "ten"], ["buckId", 123756], ["created_at", "2021-12-06 16:57:42.361394"], ["updated_at", "2021-12-06 16:57:42.361394"], ["email", "sd10@gmail.com"], ["password_digest", "$2a$12$RDtqhqwZk7yWYdSq0EoxqOLLrmasK5NGlqdnbYXL5WzNGsEIWs6R6"]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 495ms (ActiveRecord: 36.0ms | Allocations: 18753)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:57:42 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 4131)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms | Allocations: 4675)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:58:28 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 3.0ms | Allocations: 5433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8278)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 8698)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:58:34 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.1ms | Allocations: 5448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 8293)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 8646)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:59:03 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qweert", "lname"=>"asdg", "email"=>"qwertdsufy@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"77466", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 77466], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "qwertdsufy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Create (17.8ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "qweert"], ["lname", "asdg"], ["buckId", 77466], ["created_at", "2021-12-06 16:59:03.399266"], ["updated_at", "2021-12-06 16:59:03.399266"], ["email", "qwertdsufy@gmail.com"], ["password_digest", "$2a$12$dYLtaZYZdlZO5GWfwkW2KOUoKS.6m26KarG/Z4aO6oBWru0KqQq.i"]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 360ms (ActiveRecord: 34.3ms | Allocations: 6614)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:59:03 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 6.2ms | Allocations: 930)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3881)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 4294)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:20:56 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 5332)
+Completed 200 OK in 148ms (Views: 81.3ms | ActiveRecord: 0.0ms | Allocations: 10992)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:20:58 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 39.1ms | Allocations: 7426)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.6ms | Allocations: 10380)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 4.0ms | Allocations: 10935)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:20:59 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 7.6ms | Allocations: 2042)
+  Rendered student/newStd.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2710)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2791)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 3285)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: # Taken directly from the textbook
+    2: <% if @user.errors.any? %>
+    3: <div id="error_explanation">
+    4: <div class="alert alert-danger">
+    5: The form contains <%= pluralize(@user.errors.count, "error") %>.
+  
+app/views/shared/_error_messages.html.erb:2
+app/views/student/newStd.html.erb:6
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:24:24 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.0ms | Allocations: 1740)
+  Rendered student/newStd.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2403)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2483)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 3613)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: # Taken directly from the textbook
+    2: <% if @student.errors.any? %>
+    3: <div id="error_explanation">
+    4: <div class="alert alert-danger">
+    5: The form contains <%= pluralize(@student.errors.count, "error") %>.
+  
+app/views/shared/_error_messages.html.erb:2
+app/views/student/newStd.html.erb:6
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:26:59 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 5.0ms | Allocations: 1564)
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1703)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1785)
+Completed 500 Internal Server Error in 10ms (Allocations: 2167)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: # Taken directly from the textbook
+    2: <% if @student.errors.any? %>
+    3: <div id="error_explanation">
+    4: <div class="alert alert-danger">
+    5: The form contains <%= pluralize(@student.errors.count, "error") %>.
+  
+app/views/shared/_error_messages.html.erb:2
+app/views/student/newStd.html.erb:6
+app/views/student/newStd.html.erb:4
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:36:00 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 5018)
+Completed 200 OK in 135ms (Views: 61.9ms | ActiveRecord: 0.0ms | Allocations: 10679)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:36:12 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 69.9ms | Allocations: 7404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.3ms | Allocations: 10356)
+Completed 200 OK in 125ms (Views: 120.3ms | ActiveRecord: 2.5ms | Allocations: 10906)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:36:14 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 8.1ms | Allocations: 2046)
+  Rendered student/newStd.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2719)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2800)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 3294)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: # Taken directly from the textbook
+    2: <% if @student.errors.any? %>
+    3: <div id="error_explanation">
+    4: <div class="alert alert-danger">
+    5:     The form contains <%= pluralize(@student.errors.count, "error") %>.
+  
+app/views/shared/_error_messages.html.erb:2
+app/views/student/newStd.html.erb:6
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:38:29 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1944)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2025)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3157)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    3: 
+    4: <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
+    5:   
+    6:           <% if @student.errors.any? %>
+    7:         <div id="error_explanation">
+    8:         <div class="alert alert-danger">
+    9:             The form contains <%= pluralize(@student.errors.count, "error") %>.
+  
+app/views/student/newStd.html.erb:6
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:39:17 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 38.0ms | Allocations: 10954)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 11034)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 12073)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    41:     </div>
+    42: 
+    43: 
+    44:     <% if @student.errors.any? %>
+    45:     <div id="error_explanation">
+    46:     <div class="alert alert-danger">
+    47:         The form contains <%= pluralize(@student.errors.count, "error") %>.
+  
+app/views/student/newStd.html.erb:44
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 12:40:01 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 8948)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 10028)
+
+

@@ -2,7 +2,9 @@
 <h1>New Student</h1>
 
 <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
-    
+  
+         
+
     <div>
       <%= form.label :fname%><br>
       <%= form.text_field :fname, class: "form-control" %>
