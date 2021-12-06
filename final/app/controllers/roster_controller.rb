@@ -12,7 +12,9 @@ class RosterController <  ApplicationController
   end
 
   def create
-    Roster.create(team_id: params[:team_id], student_id: params[:student_id])
+    params[:student_ids].each do |student|
+      Roster.create(team_id: params[:team_id], student_id: student)
+    end
     redirect_to roster_index_path
   end
 end

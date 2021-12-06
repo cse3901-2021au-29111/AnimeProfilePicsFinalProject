@@ -1,21 +1,26 @@
 <h1>Assign Students</h1>
 
-<table>
-  <%=  form_with model: @student do |form| %>
+  <%=  form_with model: @roster do |form| %>
+  <% @teams = Team.all %>
+  <label for="team_id">Which team to add to?</label>
+  <select name ="team_id" id = "team_id">
+    <% @teams.each do |team|%>
+        <option value="<%= team.id %>"><%= team.tName %></option>
+    <% end %>
+  </select>
+  <br>
   <% @students = Student.all %>
   <% @students.each do |student| %>
-    <tr>
-        <input type="checkbox" id="<%= student.id %>">
+        <input type="checkbox" name="student_ids[]" value="<%= student.id %>" id="<%= student.id %>">
         <label for="<%= student.id %>">
           <%= student.fname %>
           <%= student.lname %>
           <%= student.email %>
         </label>
-    </tr>
+      <br>
   <% end %>
     <div>
       <%= form.submit %>
     </div>
   <% end %>
-</table>
-<br>
+
