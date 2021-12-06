@@ -1,0 +1,20 @@
+<h1>Student</h1>
+<table>
+    <%student = Student.find(params[:id])%>
+    <tr>
+        <td>Fname: <%=student.fname%></td>
+    </tr>
+    <tr>
+        <td>lname: <%=student.lname%></td>
+    </tr>
+    <tr>
+        <td>Email: <%=student.email%></td>
+    </tr>
+    <tr>
+        <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
+    </tr>
+    <tr>
+      <td><a href = "/student/stdView">Back</a></td>
+    </tr>
+
+</table>

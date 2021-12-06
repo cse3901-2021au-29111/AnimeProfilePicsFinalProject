@@ -4,17 +4,24 @@
 
     <tr>
         <th>Fname</th>
+        <th colspan="1"></th>
         <th>Lname</th>
         <th>Email</th>
-        <th colspan="3"></th>
+        <th colspan="5"></th>
     </tr>
   <% @students.each do |student| %>
     <tr>
         <td><%= student.fname %></td>
+        <td colspan="1"></th>
         <td><%= student.lname %></td>
         <td><%= student.email %></td>
+        <td><a href = "/student/<%=student.id%>">show</td>
+        <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
+        <td><%= link_to "Destroy", "/student/#{student.id}",
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></td>
     </tr>
   <% end %>
 </table>
 <br>
-<%= link_to "new student", student_newStd_path %>
+<%= link_to "loginPage student", student_newStd_path %>

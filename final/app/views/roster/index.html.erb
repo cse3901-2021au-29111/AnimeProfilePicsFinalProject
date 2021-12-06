@@ -2,18 +2,24 @@
 
 <table>
   <% @rosters = Roster.all %>
+  <% @teams = Team.all %>
+  <% @students = Student.all %>
 
-  <tr>
-    <th>Std ID</th>
-    <th>Team ID</th>
-  </tr>
-
-  <% @rosters.each do |roster| %>
-  <tr>
-      <td><%= roster.student_id %></td>
-      <td><%= roster.team_id %></td>
-  </tr>
+  <% @rosters.each do |rost| %>
+    <tr>
+      <th>
+        <%= rost.team.tName %>
+      </th>
+        <% rost.team.students.each do |student| %>
+          <td>
+            |<%= student.fname %> <%= student.lname %>
+          </td>
+        <% end %>
+      <td>
+        <a href = "/roster/<%=rost.id%>">show</a>
+      </td>
+    </tr>
   <% end %>
-    </table>
-
-<%= link_to "new roster", roster_newRost_path %>
+</table>
+<br>
+<%= link_to "add students teams", roster_newRost_path %>

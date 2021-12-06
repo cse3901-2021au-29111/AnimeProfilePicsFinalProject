@@ -1,0 +1,13 @@
+<h1>New Lab</h1>
+
+<%= form_with model: @lab do |form| %>
+  <div>
+    <%= form.label :lab_name %><br>
+    <%= form.text_field :lab_name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
