@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 2021_12_06_030421) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.string "part_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "rosters", force: :cascade do |t|
     t.integer "team_id"
     t.integer "student_id"
@@ -52,7 +59,10 @@ ActiveRecord::Schema.define(version: 2021_12_06_030421) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "nick"
     t.integer "is_admin"
+    t.string "email"
+    t.string "password_digest"
     t.integer "section_id"
+    t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["section_id"], name: "index_students_on_section_id"
   end
 
