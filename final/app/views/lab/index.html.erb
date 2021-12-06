@@ -1,0 +1,20 @@
+<h1>Labs</h1>
+
+<table>
+  <% @labs = Lab.all %>
+
+    <tr>
+      <th>Name</th>
+    </tr>
+  <% @labs.each do |lab| %>
+    <tr>
+      <td><%= lab.lab_name %></td>
+      <td><a href = "/lab/<%=lab.id%>">show</a></td>
+      <td><%= link_to "Destroy", "/lab/#{lab.id}",
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to "Add Lab", lab_newLab_path %>

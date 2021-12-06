@@ -11,7 +11,12 @@
   </head>
 
   <body>
+  <p> <% if logged_in? %>
+      Logged in as: <%= @current_student.email%>
+      <% end %>
+<br> </p>
     <%= render :partial => "layouts/header" %>
     <%= yield %>
+
   </body>
 </html>
