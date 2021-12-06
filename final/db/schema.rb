@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_002409) do
+ActiveRecord::Schema.define(version: 2021_12_06_030421) do
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"
@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 2021_12_06_002409) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "labs_id", null: false
+    t.index ["labs_id"], name: "index_evaluations_on_labs_id"
   end
 
   create_table "labs", force: :cascade do |t|
     t.string "lab_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "teams_id", null: false
-    t.index ["teams_id"], name: "index_labs_on_teams_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -36,16 +36,19 @@ ActiveRecord::Schema.define(version: 2021_12_06_002409) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "school_classes", force: :cascade do |t|
+  create_table "rosters", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "student_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_id"], name: "index_rosters_on_student_id"
+    t.index ["team_id"], name: "index_rosters_on_team_id"
   end
 
-  create_table "student_teamships", force: :cascade do |t|
+  create_table "sections", force: :cascade do |t|
+    t.integer "sectionNum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "studentId"
-    t.integer "teamId"
   end
 
   create_table "students", force: :cascade do |t|
@@ -58,7 +61,18 @@ ActiveRecord::Schema.define(version: 2021_12_06_002409) do
     t.integer "is_admin"
     t.string "email"
     t.string "password_digest"
+    t.integer "section_id"
     t.index ["email"], name: "index_students_on_email", unique: true
+    t.index ["section_id"], name: "index_students_on_section_id"
+  end
+
+  create_table "team_labs", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "teams_id", null: false
+    t.integer "labs_id", null: false
+    t.index ["labs_id"], name: "index_team_labs_on_labs_id"
+    t.index ["teams_id"], name: "index_team_labs_on_teams_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -66,7 +80,12 @@ ActiveRecord::Schema.define(version: 2021_12_06_002409) do
     t.integer "adminId"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "section_id"
+    t.string "tName"
+    t.index ["section_id"], name: "index_teams_on_section_id"
   end
 
-  add_foreign_key "labs", "teams", column: "teams_id"
+  add_foreign_key "evaluations", "labs", column: "labs_id"
+  add_foreign_key "team_labs", "labs", column: "labs_id"
+  add_foreign_key "team_labs", "teams", column: "teams_id"
 end

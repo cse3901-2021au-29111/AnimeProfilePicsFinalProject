@@ -4,12 +4,10 @@ Rails.application.routes.draw do
   get 'student/newStd'
   post "student/newStd", to: "student#create"
 
-  # get 'team/index'
-  # get 'team/new'
-  # post 'team/new', to: "team#create"
-  resources :team
+  get 'team/index'
+  get 'team/new'
+  post 'team/new', to: "team#create"
 
   root to: "student#index"
-
 
 end
