@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_05_151408) do
+ActiveRecord::Schema.define(version: 2021_12_06_002544) do
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"
@@ -29,34 +29,55 @@ ActiveRecord::Schema.define(version: 2021_12_05_151408) do
     t.index ["teams_id"], name: "index_labs_on_teams_id"
   end
 
-  create_table "school_classes", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.string "part_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rosters", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "student_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_id"], name: "index_rosters_on_student_id"
+    t.index ["team_id"], name: "index_rosters_on_team_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.integer "sectionNum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "student_teamships", force: :cascade do |t|
+    t.string "team_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "studentId"
-    t.integer "teamId"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
-    t.integer "buckId"
+    t.integer "buckID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "nick"
+    t.integer "section_id"
     t.integer "is_admin"
+    t.string "email"
+    t.string "password_digest"
+    t.index ["email"], name: "index_students_on_email", unique: true
+    t.index ["section_id"], name: "index_students_on_section_id"
   end
 
-  create_table "team", force: :cascade do |t|
-    t.integer "classId"
-    t.integer "adminId"
+  create_table "teams", force: :cascade do |t|
+    t.string "tName"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "section_id"
+    t.index ["section_id"], name: "index_teams_on_section_id"
   end
 
-  add_foreign_key "labs", "team", column: "teams_id"
+  add_foreign_key "labs", "teams", column: "teams_id"
 end
