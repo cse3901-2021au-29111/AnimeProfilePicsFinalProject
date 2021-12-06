@@ -1,10 +1,7 @@
 <h1>Roster List:</h1>
 
 <table>
-  <% @rosters = Roster.all %>
   <% @teams = Team.all %>
-  <% @students = Student.all %>
-
   <% @teams.each do |team| %>
     <tr>
       <th>

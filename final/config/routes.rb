@@ -16,14 +16,16 @@ Rails.application.routes.draw do
 
   get 'roster/index'
   get 'roster/newRost'
-  get 'roster/:id', to: 'roster#currentRost'
+  #get 'roster/:id', to: 'roster#currentRost'
   post 'roster/newRost', to: "roster#create"
-  delete 'roster/:id', to: 'roster#destroy'
+  #delete 'roster/:id', to: 'roster#destroy'
 
   #Routes for sessions
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  get 'evaluation/index'
 
 
   root to: "student#index"
