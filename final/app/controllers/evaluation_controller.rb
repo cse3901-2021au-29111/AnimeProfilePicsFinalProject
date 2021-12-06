@@ -13,9 +13,8 @@ class EvaluationController < ApplicationController
   end
 
   def create
-
-    @evaluation = Evaluation.create(student_params)
-
+    @evaluation = Evaluation.create(comment: params[:comment])
+    redirect_to evaluation_index_path
   end
 
   def destroy
