@@ -18,10 +18,6 @@ Rails.application.routes.draw do
   get 'roster/:id', to: 'roster#currentRost'
   post 'roster/newRost', to: "roster#create"
 
-  #Routes for updating the roster
-  get 'roster/selectCheckboxes'
-  post 'roster/selectCheckboxes', to: "roster#create"
-
   #Routes for sessions
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
