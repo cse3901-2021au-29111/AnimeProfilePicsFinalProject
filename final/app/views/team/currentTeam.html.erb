@@ -1,0 +1,11 @@
+<%team = Team.find(params[:id]) %>
+<h1>Team <%= team.tName %></h1>
+<br>
+<h3>Members</h3>
+<ul>
+  <% team.students.each do |student| %>
+    <li>
+      <%= student.fname %> <%= student.lname %> <%= student.email %> <a href = "/student/<%=student.id%>">show</a>
+    </li>
+  <% end %>
+</ul>

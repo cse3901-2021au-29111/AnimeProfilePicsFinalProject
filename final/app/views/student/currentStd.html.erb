@@ -62,6 +62,8 @@ button:hover, a:hover {
     <h1><%=student.fname%> <%=student.lname%></h1>
     <p><%=student.email%></p>
     <br>
+
+    <%= link_to "Edit", "/student/#{student.id}/edit"%>
     <a href="/student/stdView"><button>Go Back</button></a>
 </div>
 </body>

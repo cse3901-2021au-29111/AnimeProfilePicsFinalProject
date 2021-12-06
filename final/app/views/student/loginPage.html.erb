@@ -1,0 +1,11 @@
+
+<h1>Log in</h1>
+<%= form_with model: @student do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+    <%= f.submit "Log in"%>
+<% end %>
+<p>New user? <%= link_to "Sign up now!", student_newStd_path %></p>
