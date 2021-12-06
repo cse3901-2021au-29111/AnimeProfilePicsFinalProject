@@ -51,12 +51,12 @@ ActiveRecord::Schema.define(version: 2021_12_05_151408) do
     t.integer "is_admin"
   end
 
-  create_table "teams", force: :cascade do |t|
+  create_table "team", force: :cascade do |t|
     t.integer "classId"
     t.integer "adminId"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "labs", "teams", column: "teams_id"
+  add_foreign_key "labs", "team", column: "teams_id"
 end

@@ -2030,3 +2030,65 @@ Processing by WelcomeController#stdView as HTML
 Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.7ms | Allocations: 11936)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? AND "students"."id" != ? LIMIT ?[0m  [["buckId", 123], ["id", 11], ["LIMIT", 1]]
+  [1m[36mStudent Update (4.8ms)[0m  [1m[33mUPDATE "students" SET "updated_at" = ?, "is_admin" = ? WHERE "students"."id" = ?[0m  [["updated_at", "2021-12-06 01:45:50.667428"], ["is_admin", 1], ["id", 11]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:58:43 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/welcome/stdView"):
+  
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:58:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/welcome/stdView"):
+  
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 20:59:03 -0500
+  
+ActionController::RoutingError (uninitialized constant StudentController):
+  
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:59:20 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant StudentController):
+  
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:59:56 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4905)
+Completed 200 OK in 23ms (Views: 14.3ms | Allocations: 9686)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 20:59:58 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (12.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 26.7ms | Allocations: 6565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 9518)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 13.2ms | Allocations: 10063)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 21:00:00 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 25.4ms | Allocations: 5193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 8037)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.0ms | Allocations: 8552)
+
+
