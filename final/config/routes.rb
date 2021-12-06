@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get 'roster/index'
   get 'roster/newRost'
+  get 'roster/:id', to: 'roster#currentRost'
   post 'roster/newRost', to: "roster#create"
 
   root to: "student#index"
