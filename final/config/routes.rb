@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   get 'student/stdView'
   get 'student/newStd'
   post "student/newStd", to: "student#create"
+
+  # get 'team/index'
+  # get 'team/new'
+  # post 'team/new', to: "team#create"
+  resources :team
+
   root to: "student#index"
 
 

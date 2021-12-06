@@ -12,7 +12,7 @@ class StudentController <  ApplicationController
   end
 
   def create
-    Student.create(fname: params[:fname], lname: params[:lname], buckId: params[:buckId])
+    Student.create(fname: params[:fname], lname: params[:lname], email: params[:email])
     redirect_to student_stdView_path
   end
 

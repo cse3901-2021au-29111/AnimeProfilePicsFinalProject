@@ -1,0 +1,8 @@
+<h1>Roster List:</h1>
+<ul>
+  <% Student.all.each do |student| %>
+  <li>
+    <%= student.fname %> " " <%= student.lname %>
+  </li>
+  <% end %>
+</ul>
