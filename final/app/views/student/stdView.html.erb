@@ -15,11 +15,13 @@
         <td colspan="1"></th>
         <td><%= student.lname %></td>
         <td><%= student.email %></td>
-        <td><a href = "/student/<%=student.id%>">show</td>
+      <% if 1 %>
+        <td><a href = "/student/<%=student.id%>">Show</td>
         <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
         <td><%= link_to "Destroy", "/student/#{student.id}",
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>

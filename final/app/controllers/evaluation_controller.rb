@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class EvaluationController < ApplicationController
   def index
     @evaluations = Evaluation.all
@@ -38,3 +39,8 @@ class EvaluationController < ApplicationController
   end
 
 end
+=======
+class EvaluationController <  ApplicationController
+
+end
+>>>>>>> origin/frontend
