@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get 'sessions/loginPage'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'student/stdView'
   get 'student/newStd'
@@ -19,9 +19,16 @@ Rails.application.routes.draw do
   post 'roster/newRost', to: "roster#create"
 
   #Routes for sessions
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'sessions#loginPage'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  #Routes for labs
+  get 'lab/index'
+  get 'lab/newLab'
+  get 'lab/:id', to: 'lab#currentLab'
+  post 'lab/newLab', to: 'lab#create'
+  delete 'lab/:id', to: 'lab#destroy'
 
 
   root to: "student#index"
