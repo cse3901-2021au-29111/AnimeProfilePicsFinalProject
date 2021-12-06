@@ -4,7 +4,7 @@ class TeamController <  ApplicationController
   end
 
   def show
-    @team = Team.find(params[:section_id])
+    @team = Team.find(params[:id])
   end
 
   def new
@@ -15,4 +15,17 @@ class TeamController <  ApplicationController
     Team.create(tName: params[:tName])
     redirect_to team_index_path
   end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    Team.find(params[:id]).destroy
+    redirect_to team_index_path
+  end
+
+
 end

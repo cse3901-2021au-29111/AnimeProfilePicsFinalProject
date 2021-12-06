@@ -5,16 +5,19 @@
   <% @teams = Team.all %>
   <% @students = Student.all %>
 
-  <% @teams.each do |team| %>
+  <% @rosters.each do |rost| %>
     <tr>
       <th>
-        <%= team.tName %>
+        <%= rost.team.tName %>
       </th>
-        <% team.students.each do |student| %>
+        <% rost.team.students.each do |student| %>
           <td>
             |<%= student.fname %> <%= student.lname %>
           </td>
         <% end %>
+      <td>
+        <a href = "/roster/<%=rost.id%>">show</a>
+      </td>
     </tr>
   <% end %>
 </table>
