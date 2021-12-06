@@ -1,6 +1,7 @@
 <h1>Students</h1>
 
 <table>
+  <% @students = Student.all %>
   <% @students.each do |student| %>
     <tr>
         <th>Fname</th>
@@ -11,7 +12,7 @@
     <tr>
         <td><%= student.fname %></td>
         <td><%= student.lname %></td>
-        <td><%= student.buckId %>></td>
+        <td><%= student.buckId %></td>
     </tr>
   <% end %>
 </table>

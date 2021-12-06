@@ -1847,3 +1847,186 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
     7:         <th>Lname</th>
   
 app/views/welcome/stdView.html.erb:4
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 19:57:43 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1609)
+Completed 500 Internal Server Error in 11ms (Allocations: 2728)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students</h1>
+    2: 
+    3: <table>
+    4:   <% @student.each do |student| %>
+    5:     <tr>
+    6:         <th>Fname</th>
+    7:         <th>Lname</th>
+  
+app/views/welcome/stdView.html.erb:4
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 19:59:36 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1922)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2007)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4721)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students</h1>
+    2: 
+    3: <table>
+    4:   <% @students.each do |student| %>
+    5:     <tr>
+    6:         <th>Fname</th>
+    7:         <th>Lname</th>
+  
+app/views/welcome/stdView.html.erb:4
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/newStd" for 127.0.0.1 at 2021-12-05 20:00:55 -0500
+Processing by WelcomeController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/newStd.html.erb within layouts/application
+  Rendered welcome/newStd.html.erb within layouts/application (Duration: 9.3ms | Allocations: 7076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 11718)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 12309)
+
+
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 20:01:03 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cameron", "lname"=>"Millar", "buckId"=>"123", "commit"=>"Save "}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 3293)
+
+
+  
+ArgumentError (Unknown key: :uniqueness. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/student.rb:5:in `<class:Student>'
+app/models/student.rb:1:in `<main>'
+app/controllers/welcome_controller.rb:15:in `create'
+Started POST "/welcome/newStd" for 127.0.0.1 at 2021-12-05 20:01:27 -0500
+Processing by WelcomeController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Cameron", "lname"=>"Millar", "buckId"=>"123", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 123], ["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mStudent Create (1.0ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "Cameron"], ["lname", "Millar"], ["buckId", 123], ["created_at", "2021-12-06 01:01:28.035152"], ["updated_at", "2021-12-06 01:01:28.035152"]]
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/welcome_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/welcome/stdView
+Completed 302 Found in 84ms (ActiveRecord: 44.4ms | Allocations: 13256)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:01:28 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1351)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1434)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 1952)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students</h1>
+    2: 
+    3: <table>
+    4:   <% @students.each do |student| %>
+    5:     <tr>
+    6:         <th>Fname</th>
+    7:         <th>Lname</th>
+  
+app/views/welcome/stdView.html.erb:4
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:02:34 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1922)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2007)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4721)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Students</h1>
+    2: 
+    3: <table>
+    4:   <% @students.each do |student| %>
+    5:     <tr>
+    6:         <th>Fname</th>
+    7:         <th>Lname</th>
+  
+app/views/welcome/stdView.html.erb:4
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:03:25 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/welcome/stdView.html.erb:5
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 20.3ms | Allocations: 10234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 14889)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.6ms | Allocations: 16137)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:03:37 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/welcome/stdView.html.erb:5
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 8.4ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 4077)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.1ms | Allocations: 5222)
+
+
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:04:04 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1510)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1591)
+Completed 500 Internal Server Error in 8ms (Allocations: 2720)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: 
+    3: <table>
+    4:   <%# @students = Student.all %>
+    5:   <% @students.each do |student| %>
+    6:     <tr>
+    7:         <th>Fname</th>
+    8:         <th>Lname</th>
+  
+app/views/welcome/stdView.html.erb:5
+Started GET "/welcome/stdView" for 127.0.0.1 at 2021-12-05 20:04:18 -0500
+Processing by WelcomeController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/welcome/stdView.html.erb:5
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/welcome/stdView.html.erb:5
+  Rendered welcome/stdView.html.erb within layouts/application (Duration: 32.1ms | Allocations: 7686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 10783)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.7ms | Allocations: 11936)
+
+
