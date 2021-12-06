@@ -16,6 +16,9 @@ class StudentController <  ApplicationController
     redirect_to student_stdView_path
   end
 
-  def stdView
+  def edit
+  end
+
+  def update
   end
 end

@@ -3206,3 +3206,352 @@ Migrating to AddNameToTeam (20211206030421)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 10:36:47 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 17.7ms | Allocations: 5980)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 137.3ms | Allocations: 21903)
+Completed 200 OK in 171ms (Views: 146.6ms | ActiveRecord: 0.0ms | Allocations: 24310)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:37:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/selectCheckboxes"):
+  
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:37:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/selectCheckboxes"):
+  
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:43:36 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:5
+  [1m[36mStudent Load (2.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:5
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 73.5ms | Allocations: 10939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.6ms | Allocations: 14111)
+Completed 200 OK in 100ms (Views: 99.7ms | ActiveRecord: 3.6ms | Allocations: 14780)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:45:06 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 6.0ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4172)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.1ms | Allocations: 5243)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:45:07 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 2.6ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3791)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms | Allocations: 4198)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:55:25 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 18.9ms | Allocations: 2343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 5584)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 4.6ms | Allocations: 6642)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:55:47 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 4506)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.1ms | Allocations: 5562)
+
+
+Started POST "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:55:50 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/student/selectCheckboxes"):
+  
+Started POST "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:56:22 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/student/selectCheckboxes"):
+  
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 10:56:47 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6194)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 6703)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 10:56:58 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Mike", "lname"=>"Yamo", "email"=>"yamokoski.993@osu.edu", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (5.5ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "yamokoski.993@osu.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://0.0.0.0:3000/student/stdView
+Completed 302 Found in 44ms (ActiveRecord: 5.9ms | Allocations: 6340)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 10:56:58 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 7.4ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4004)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 4514)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 10:57:02 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5952)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 10:57:20 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"John", "lname"=>"Cena", "email"=>"cena@cme.com", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "cena@cme.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://0.0.0.0:3000/student/stdView
+Completed 302 Found in 19ms (ActiveRecord: 0.5ms | Allocations: 3938)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 10:57:21 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 2.4ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3800)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.1ms | Allocations: 4205)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:57:24 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 8.0ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4034)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms | Allocations: 4439)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:57:25 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 5.1ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4034)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms | Allocations: 4439)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 10:57:25 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 4.8ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4033)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms | Allocations: 4438)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2021-12-06 10:58:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/index"):
+  
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 10:58:29 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6340)
+Completed 200 OK in 18ms (Views: 17.0ms | Allocations: 6838)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2021-12-06 10:58:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/index"):
+  
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 10:58:48 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2994)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5961)
+Completed 200 OK in 19ms (Views: 19.0ms | Allocations: 6315)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 10:59:02 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"MIke", "lname"=>"Yamos", "email"=>"yamokoski.993@osu.edu", "commit"=>"Save "}
+Completed 500 Internal Server Error in 22ms (Allocations: 3881)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/student.rb:5:in `<class:Student>'
+app/models/student.rb:1:in `<main>'
+app/controllers/student_controller.rb:15:in `create'
+Started GET "/student/index" for 127.0.0.1 at 2021-12-06 10:59:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/index"):
+  
+Started GET "/student/index" for 127.0.0.1 at 2021-12-06 10:59:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/index"):
+  
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 10:59:46 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 6340)
+Completed 200 OK in 17ms (Views: 15.6ms | Allocations: 6838)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 10:59:55 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Mik", "lname"=>"Yamo", "email"=>"yamokoski.993@osu.edu", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "yamokoski.993@osu.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Create (3.4ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "created_at", "updated_at", "email") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "Mik"], ["lname", "Yamo"], ["created_at", "2021-12-06 15:59:55.922499"], ["updated_at", "2021-12-06 15:59:55.922499"], ["email", "yamokoski.993@osu.edu"]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://0.0.0.0:3000/student/stdView
+Completed 302 Found in 77ms (ActiveRecord: 14.0ms | Allocations: 14178)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 10:59:55 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 5.8ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3865)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 4271)
+
+
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 11:00:14 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 3.5ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4059)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.1ms | Allocations: 4464)
+
+
+Started POST "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 11:00:32 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/student/selectCheckboxes"):
+  
+Started GET "/student/selectCheckboxes" for 127.0.0.1 at 2021-12-06 11:00:33 -0500
+Processing by StudentController#selectCheckboxes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/selectCheckboxes.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/selectCheckboxes.html.erb:6
+  Rendered student/selectCheckboxes.html.erb within layouts/application (Duration: 7.0ms | Allocations: 995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4058)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.1ms | Allocations: 4464)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-06 11:02:25 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 4132)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.2ms | Allocations: 6800)
+
+
+Started GET "/team/new" for 127.0.0.1 at 2021-12-06 11:02:27 -0500
+Processing by TeamController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/new.html.erb within layouts/application
+  Rendered team/new.html.erb within layouts/application (Duration: 51.8ms | Allocations: 3108)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 3188)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.1ms | Allocations: 7471)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<ActionView::Base:0x007f73817fb8f8>
+Did you mean?  team_new_path):
+    1: <h1>New Team</h1>
+    2: 
+    3: <%= form_with model: @team do |form| %>
+    4:   <div>
+    5:     <%= form.label :tName %><br>
+    6:     <%= form.text_field :tName %>
+  
+app/views/team/new.html.erb:3

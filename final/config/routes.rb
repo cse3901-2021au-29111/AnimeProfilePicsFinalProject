@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'team/new'
   post 'team/new', to: "team#create"
 
+  #Routes for updating the roster
+  get 'roster/selectCheckboxes'
+  post 'roster/selectCheckboxes', to: "roster#create"
+
   root to: "student#index"
 
 end
