@@ -1,0 +1,20 @@
+<h1>Evaluations</h1>
+<br>
+  <% @teams = Team.all %>
+   <% @teams.each do |team| %>
+    <h2><%= team.tName %></h2>
+      <% @students = team.students %>
+      <% @students.each do |student| %>
+        <h3><%= student.fname + " " + student.lname %></h3>
+        <ul>
+          <% @evaluations = student.evaluations %>
+          <% @evaluations.each do |eval| %>
+          <li>
+            <%= eval.rating + "" + eval.evaluated_id %>
+          </li>
+          <% end %>
+        </ul>
+      <% end %>
+  <% end %>
+<br>
+<%= link_to "Do Eval", evaluation_newEval_path %>

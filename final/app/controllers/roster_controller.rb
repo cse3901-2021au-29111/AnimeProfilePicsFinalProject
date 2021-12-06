@@ -24,9 +24,9 @@ class RosterController <  ApplicationController
   def edit
   end
 
-  def destroy
-    Team.find(params[:id]).destroy
-    redirect_to roster_index_path
-  end
+  # def destroy
+  #   Roster.find(params[:id]).destroy
+  #   redirect_to roster_index_path
+  # end
 
 end

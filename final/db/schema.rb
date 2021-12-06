@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_12_06_224309) do
+=======
+ActiveRecord::Schema.define(version: 2021_12_06_214747) do
+>>>>>>> 59c16b1ba75dc72c0cb458c17fc8186dc84d5acb
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"
@@ -19,8 +23,8 @@ ActiveRecord::Schema.define(version: 2021_12_06_224309) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "labs_id", null: false
-    t.index ["labs_id"], name: "index_evaluations_on_labs_id"
+    t.integer "lab_id", null: false
+    t.index ["lab_id"], name: "index_evaluations_on_lab_id"
   end
 
   create_table "labs", force: :cascade do |t|
@@ -74,10 +78,10 @@ ActiveRecord::Schema.define(version: 2021_12_06_224309) do
   create_table "team_labs", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "teams_id", null: false
-    t.integer "labs_id", null: false
-    t.index ["labs_id"], name: "index_team_labs_on_labs_id"
-    t.index ["teams_id"], name: "index_team_labs_on_teams_id"
+    t.integer "team_id", null: false
+    t.integer "lab_id", null: false
+    t.index ["lab_id"], name: "index_team_labs_on_lab_id"
+    t.index ["team_id"], name: "index_team_labs_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|

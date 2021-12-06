@@ -1,4 +1,4 @@
-<h1>Roster List:</h1>
+<h1>Team Labs:</h1>
 
 <table>
   <% @teams = Team.all %>
@@ -7,13 +7,13 @@
       <th>
         <%= team.tName %>
       </th>
-        <% team.students.each do |student| %>
+        <% team.labs.each do |lab| %>
           <td>
-            |<%= student.fname %> <%= student.lname %>
+            |<%= lab.lab_name %>
           </td>
         <% end %>
     </tr>
   <% end %>
 </table>
 <br>
-<%= link_to "add students to teams", roster_newRost_path %>
+<%= link_to "Assign Teams Labs", team_labs_newTeamLab_path %>

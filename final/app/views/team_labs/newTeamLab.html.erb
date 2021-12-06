@@ -1,0 +1,24 @@
+<h1>Assign Labs</h1>
+
+  <%=  form_with model: @teamLab do |form| %>
+  <% @teams = Team.all %>
+  <label for="team_id">Which team to add to?</label>
+  <select name ="team_id" id = "team_id">
+    <% @teams.each do |team|%>
+        <option value="<%= team.id %>"><%= team.tName %></option>
+    <% end %>
+  </select>
+  <br>
+  <% @labs = Lab.all %>
+  <% @labs.each do |lab| %>
+        <input type="checkbox" name="lab_ids[]" value="<%= lab.id %>" id="<%= lab.id %>">
+        <label for="<%= lab.id %>">
+          <%= lab.lab_name %>
+        </label>
+      <br>
+  <% end %>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+

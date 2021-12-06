@@ -1,0 +1,26 @@
+<h1>Do Evaluation</h1>
+
+  <%=  form_with model: @evaluations do |form| %>
+  <% @teams = Team.all %>
+  <label for="team_id">Which team to add to?</label>
+  <select name ="team_id" id = "team_id">
+    <% @teams.each do |team|%>
+        <option value="<%= team.id %>"><%= team.tName %></option>
+    <% end %>
+  </select>
+  <br>
+  <% @students = Student.all %>
+  <% @students.each do |student| %>
+        <input type="checkbox" name="student_ids[]" value="<%= student.id %>" id="<%= student.id %>">
+        <label for="<%= student.id %>">
+          <%= student.fname %>
+          <%= student.lname %>
+          <%= student.email %>
+        </label>
+      <br>
+  <% end %>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+

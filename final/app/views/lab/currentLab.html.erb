@@ -1,5 +1,14 @@
 <% lab = Lab.find(params[:id]) %>
 <h1>Lab <%= lab.lab_name %></h1>
+<% students = Student.all %>
+<h2>Students who need to evaluate</h2>
+<ul>
+  <% students.each do |student| %>
+  <% if lab.evaluations.any? { |eval| eval.evaluator_id != student.id }%>
+    <li><%= student.fName %> <%= student.lName %></li>
+  <% end %>
+  <% end %>
+</ul>
 <br>
 
 

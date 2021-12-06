@@ -14446,7 +14446,26 @@ Processing by StudentController#stdView as HTML
 Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 4818)
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRoster Load (0.1ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRoster Load (0.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" ORDER BY "rosters"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoster Load (0.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" WHERE "rosters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoster Load (0.1ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" WHERE "rosters"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoster Load (0.1ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+=======
+Started GET "/" for 127.0.0.1 at 2021-12-06 15:14:58 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
 Started GET "/" for 127.0.0.1 at 2021-12-06 15:19:31 -0500
+>>>>>>> 7555ebd39c67166901950fc48fe219fd738a8e72
 Processing by StudentController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering student/index.html.erb within layouts/application
@@ -16810,6 +16829,123 @@ Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.1ms | Allocations: 577
 >>>>>>> origin/frontend
 
 
+<<<<<<< HEAD
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRoster Load (0.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" ORDER BY "rosters"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoster Load (0.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" WHERE "rosters"."student_id" = ? /* loading for inspect */ LIMIT ?[0m  [["student_id", 1], ["LIMIT", 11]]
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLab Load (0.2ms)[0m  [1m[34mSELECT "labs".* FROM "labs" ORDER BY "labs"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLab Create (11.5ms)[0m  [1m[32mINSERT INTO "labs" ("lab_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["lab_name", "set"], ["created_at", "2021-12-06 21:16:27.175417"], ["updated_at", "2021-12-06 21:16:27.175417"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLab Load (0.1ms)[0m  [1m[34mSELECT "labs".* FROM "labs" ORDER BY "labs"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvaluation Load (0.6ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" WHERE "evaluations"."lab_id" = ? /* loading for inspect */ LIMIT ?[0m  [["lab_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameColumnEval (20211206211732)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "evaluator_id" integer DEFAULT NULL, "evaluated_id" integer DEFAULT NULL, "comment" varchar DEFAULT NULL, "rating" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_labs_id" ON "aevaluations" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","evaluator_id","evaluated_id","comment","rating","created_at","updated_at","lab_id")
+                     SELECT "id","evaluator_id","evaluated_id","comment","rating","created_at","updated_at","labs_id" FROM "evaluations"[0m
+  [1m[35m (13.2ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "evaluator_id" integer DEFAULT NULL, "evaluated_id" integer DEFAULT NULL, "comment" varchar DEFAULT NULL, "rating" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_labs_id" ON "evaluations" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","evaluator_id","evaluated_id","comment","rating","created_at","updated_at","lab_id")
+                     SELECT "id","evaluator_id","evaluated_id","comment","rating","created_at","updated_at","lab_id" FROM "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_lab_id" ON "evaluations" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP INDEX "index_evaluations_on_labs_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211206211732"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLab Load (0.1ms)[0m  [1m[34mSELECT "labs".* FROM "labs" ORDER BY "labs"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvaluation Load (0.1ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" WHERE "evaluations"."lab_id" = ? /* loading for inspect */ LIMIT ?[0m  [["lab_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameTeamLabs (20211206214747)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_labs" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_ateam_labs_on_teams_id" ON "ateam_labs" ("teams_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_ateam_labs_on_labs_id" ON "ateam_labs" ("lab_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ateam_labs" ("id","created_at","updated_at","teams_id","lab_id")
+                     SELECT "id","created_at","updated_at","teams_id","labs_id" FROM "team_labs"[0m
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE "team_labs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "team_labs" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_labs_id" ON "team_labs" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_teams_id" ON "team_labs" ("teams_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_labs" ("id","created_at","updated_at","teams_id","lab_id")
+                     SELECT "id","created_at","updated_at","teams_id","lab_id" FROM "ateam_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_lab_id" ON "team_labs" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP INDEX "index_team_labs_on_labs_id"[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameTeamLabs (20211206214747)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_labs" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateam_labs_on_teams_id" ON "ateam_labs" ("teams_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateam_labs_on_labs_id" ON "ateam_labs" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateam_labs" ("id","created_at","updated_at","teams_id","lab_id")
+                     SELECT "id","created_at","updated_at","teams_id","labs_id" FROM "team_labs"[0m
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE "team_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_labs" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teams_id" integer NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_labs_id" ON "team_labs" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_teams_id" ON "team_labs" ("teams_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_labs" ("id","created_at","updated_at","teams_id","lab_id")
+                     SELECT "id","created_at","updated_at","teams_id","lab_id" FROM "ateam_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateam_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_lab_id" ON "team_labs" ("lab_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_team_labs_on_labs_id"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateam_labs" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "team_id" integer NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateam_labs_on_lab_id" ON "ateam_labs" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateam_labs_on_teams_id" ON "ateam_labs" ("team_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateam_labs" ("id","created_at","updated_at","team_id","lab_id")
+                     SELECT "id","created_at","updated_at","teams_id","lab_id" FROM "team_labs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "team_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "team_labs" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "team_id" integer NOT NULL, "lab_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_teams_id" ON "team_labs" ("team_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_lab_id" ON "team_labs" ("lab_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "team_labs" ("id","created_at","updated_at","team_id","lab_id")
+                     SELECT "id","created_at","updated_at","team_id","lab_id" FROM "ateam_labs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ateam_labs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_team_labs_on_team_id" ON "team_labs" ("team_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP INDEX "index_team_labs_on_teams_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211206214747"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
 Started GET "/" for 127.0.0.1 at 2021-12-06 16:05:01 -0500
   [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -17294,6 +17430,7 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.2ms | Allocations: 5700)
 
 
+<<<<<<< HEAD
 Started GET "/sessions/new" for 127.0.0.1 at 2021-12-06 16:29:22 -0500
   [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -20039,3 +20176,12 @@ Processing by StudentController#index as HTML
 Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 3757)
 
 
+=======
+>>>>>>> 1f29a4d5f0be92f74350af740214cce3516884d8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+>>>>>>> origin/frontend
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTeamLab Load (0.5ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeamLab Destroy (9.6ms)[0m  [1m[31mDELETE FROM "team_labs"[0m
+>>>>>>> 59c16b1ba75dc72c0cb458c17fc8186dc84d5acb
