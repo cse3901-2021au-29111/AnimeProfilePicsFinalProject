@@ -3480,3 +3480,1840 @@ Did you mean?  team_new_path):
     6:     <%= form.text_field :tName %>
   
 app/views/team/new.html.erb:3
+Started GET "/" for ::1 at 2021-12-06 07:59:12 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 5018)
+Completed 200 OK in 92ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 10591)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 07:59:14 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 50.0ms | Allocations: 7233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.1ms | Allocations: 10187)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.9ms | Allocations: 10734)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 07:59:15 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 8176)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms | Allocations: 8690)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 07:59:31 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 38.5ms | Allocations: 4939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.4ms | Allocations: 7964)
+Completed 200 OK in 68ms (Views: 63.9ms | ActiveRecord: 0.0ms | Allocations: 9026)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 07:59:40 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwert", "lname"=>"asdf", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 865)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Student.):
+  
+app/controllers/student_controller.rb:17:in `create'
+Started GET "/" for 127.0.0.1 at 2021-12-06 08:19:57 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 5018)
+Completed 200 OK in 95ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 10718)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 08:19:59 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 39.5ms | Allocations: 7233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 10187)
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 4.2ms | Allocations: 10734)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:20:00 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2635)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 2716)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 3202)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Hash:0x0000556106c9fd58>):
+    1: 
+    2: <h1>New Student</h1>
+    3: 
+    4: <%=form_for model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    5:     
+    6:     <div>
+    7:       <%= form.label :fname %><br>
+  
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:26:14 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2007)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 2089)
+Completed 500 Internal Server Error in 29ms (Allocations: 2688)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Hash:0x0000556105a13c48>):
+    1: 
+    2: <h1>New Student</h1>
+    3: 
+    4: <%=form_for model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    5:     
+    6:     <div>
+    7:       <%= form.label :fname %><br>
+  
+app/views/student/newStd.html.erb:4
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 08:26:16 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 42.9ms | Allocations: 8791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 11872)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.7ms | Allocations: 12290)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:26:17 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2018)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 2100)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2479)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Hash:0x00007fc708b81dd0>):
+    1: 
+    2: <h1>New Student</h1>
+    3: 
+    4: <%=form_for model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    5:     
+    6:     <div>
+    7:       <%= form.label :fname %><br>
+  
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:26:34 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 13.7ms | Allocations: 6632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 9657)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 10719)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 08:26:44 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"asd", "lname"=>"asfddfs", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Create Account"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 681)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               password_confirmation
+               controller):
+  
+app/controllers/student_controller.rb:30:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 08:27:27 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"asd", "lname"=>"asfddfs", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :fname, :lname, :email, :password, :password_confirmation, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5340)
+Completed 200 OK in 91ms (Views: 18.8ms | ActiveRecord: 7.2ms | Allocations: 18581)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:28:14 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 3.3ms | Allocations: 4523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7526)
+Completed 200 OK in 16ms (Views: 15.6ms | Allocations: 8074)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 08:28:23 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Brutus", "lname"=>"Buckeye", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :fname, :lname, :email, :password, :password_confirmation, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 5088)
+Completed 200 OK in 114ms (Views: 29.0ms | ActiveRecord: 3.6ms | Allocations: 17683)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 08:49:03 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 5018)
+Completed 200 OK in 166ms (Views: 71.7ms | ActiveRecord: 0.0ms | Allocations: 10670)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 08:49:05 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 46.1ms | Allocations: 7233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 10187)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 1.0ms | Allocations: 10734)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:49:06 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1601)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1683)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2170)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1>New Student</h1>
+
+<%=form_with model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    
+    <div>
+      <%= form.label :fname, class: "form-control" %><br>
+      <%= form.text_field :fname %>
+    </div>
+
+    <div>
+      <%= form.label :lname,  %><br>
+      <%= form.text_field :lname,  class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :email %><br>
+      <%= form.text_field :email,  class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :password %> <br>
+      <%= form.password_field :password , class: "form-control"%>
+  </div>
+
+
+  <div>
+      <%= form.label :password_confirmation, "Confirmation" %> <br>
+      <%= form.password_field :password_confirmation, class: "form-control" %>
+  </div>
+
+    <br>
+    <div>
+      <%= form.submit "Create Account" %>
+    </div>
+
+<% end %>
+
+):
+1:    
+2:    <h1>New Student</h1>
+3:    
+4:    <%=form_with model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+5:        
+6:        <div>
+7:          <%= form.label :fname, class: "form-control" %><br>
+8:          <%= form.text_field :fname %>
+9:        </div>
+10:    
+11:        <div>
+12:          <%= form.label :lname,  %><br>
+13:          <%= form.text_field :lname,  class: "form-control" %>
+14:        </div>
+15:    
+16:        <div>
+17:          <%= form.label :email %><br>
+18:          <%= form.text_field :email,  class: "form-control" %>
+19:        </div>
+20:    
+21:        <div>
+22:          <%= form.label :password %> <br>
+23:          <%= form.password_field :password , class: "form-control"%>
+24:      </div>
+25:    
+26:    
+27:      <div>
+28:          <%= form.label :password_confirmation, "Confirmation" %> <br>
+29:          <%= form.password_field :password_confirmation, class: "form-control" %>
+30:      </div>
+31:    
+32:        <br>
+33:        <div>
+34:          <%= form.submit "Create Account" %>
+35:        </div>
+36:    
+37:    <% end %>
+  
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:51:14 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1291)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1373)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2498)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1>New Student</h1>
+
+<%=form_with model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    
+    <div>
+      <%= form.label :fname%><br>
+      <%= form.text_field :fname, class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :lname,  %><br>
+      <%= form.text_field :lname, class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :email %><br>
+      <%= form.text_field :email,  class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :password %> <br>
+      <%= form.password_field :password , class: "form-control"%>
+  </div>
+
+
+  <div>
+      <%= form.label :password_confirmation, "Confirmation" %> <br>
+      <%= form.password_field :password_confirmation, class: "form-control" %>
+  </div>
+
+    <br>
+    <div>
+      <%= form.submit "Create Account" %>
+    </div>
+
+<% end %>
+
+):
+1:    
+2:    <h1>New Student</h1>
+3:    
+4:    <%=form_with model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+5:        
+6:        <div>
+7:          <%= form.label :fname%><br>
+8:          <%= form.text_field :fname, class: "form-control" %>
+9:        </div>
+10:    
+11:        <div>
+12:          <%= form.label :lname,  %><br>
+13:          <%= form.text_field :lname, class: "form-control" %>
+14:        </div>
+15:    
+16:        <div>
+17:          <%= form.label :email %><br>
+18:          <%= form.text_field :email,  class: "form-control" %>
+19:        </div>
+20:    
+21:        <div>
+22:          <%= form.label :password %> <br>
+23:          <%= form.password_field :password , class: "form-control"%>
+24:      </div>
+25:    
+26:    
+27:      <div>
+28:          <%= form.label :password_confirmation, "Confirmation" %> <br>
+29:          <%= form.password_field :password_confirmation, class: "form-control" %>
+30:      </div>
+31:    
+32:        <br>
+33:        <div>
+34:          <%= form.submit "Create Account" %>
+35:        </div>
+36:    
+37:    <% end %>
+  
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:12: syntax error, unexpected ')'
+app/views/student/newStd.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/student/newStd.html.erb:39: syntax error, unexpected end, expecting ')'
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:51:46 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 37.2ms | Allocations: 8813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 11954)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.0ms | Allocations: 13024)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 08:52:00 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwert", "lname"=>"zxcv", "email"=>"buck@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :fname, :lname, :email, :password, :password_confirmation, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 5361)
+Completed 200 OK in 75ms (Views: 33.9ms | ActiveRecord: 0.5ms | Allocations: 10240)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:53:12 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 31.6ms | Allocations: 4819)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 4899)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 5925)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `fname' for #<ActionView::Base:0x00564d30175308>):
+     5:     
+     6:     <div>
+     7:       <%= form.label :fname%><br>
+     8:       <%= form.text_field :student[fname], class: "form-control" %>
+     9:     </div>
+    10: 
+    11:     <div>
+  
+app/views/student/newStd.html.erb:8
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:53:46 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 32.4ms | Allocations: 4365)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 4445)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 5476)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `fname' for #<ActionView::Base:0x00564d2d48bea0>):
+    4: <%=form_with model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    5:     
+    6:     <div>
+    7:       <%= form.label :student[fname]%><br>
+    8:       <%= form.text_field :student[fname], class: "form-control" %>
+    9:     </div>
+   10: 
+  
+app/views/student/newStd.html.erb:7
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 08:57:28 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 61.9ms | Allocations: 4472)
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 4553)
+Completed 500 Internal Server Error in 70ms (Allocations: 5586)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student' for #<ActionView::Base:0x00564d302fb150>):
+    4: <%=form_with model: @student, url: student_newStd_path, local: true, method: "post" do |form| %>
+    5:     
+    6:     <div>
+    7:     <%= text_field_tag student[fname], nil, class: "form-control", placeholder: "First Name" %>
+    8:     </div>
+    9: 
+   10:     <div>
+  
+app/views/student/newStd.html.erb:7
+app/views/student/newStd.html.erb:4
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 09:14:38 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7876)
+Completed 200 OK in 18ms (Views: 16.7ms | Allocations: 8943)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 09:14:51 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqw", "lname"=>"dsfdsf", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5118)
+Completed 200 OK in 100ms (Views: 24.3ms | ActiveRecord: 4.5ms | Allocations: 17155)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 100], ["LIMIT", 1]]
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "buck@gmail.com"], ["LIMIT", 1]]
+  [1m[36mStudent Create (2.7ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "brutus"], ["lname", "buck"], ["buckId", 100], ["created_at", "2021-12-06 14:31:37.917112"], ["updated_at", "2021-12-06 14:31:37.917112"], ["email", "buck@gmail.com"], ["password_digest", "$2a$12$mShoQ4GRToAC69BFfWTMt.GJu17eHVtc4/dlIhrd/d6177/Decdgm"]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2021-12-06 09:33:30 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 5018)
+Completed 200 OK in 148ms (Views: 56.2ms | ActiveRecord: 0.0ms | Allocations: 10673)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 09:33:32 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 43.4ms | Allocations: 7254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 10208)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.9ms | Allocations: 10755)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:33:35 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 63.0ms | Allocations: 7568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.1ms | Allocations: 10414)
+Completed 200 OK in 97ms (Views: 96.6ms | ActiveRecord: 0.0ms | Allocations: 10930)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:34:29 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"abcd", "lname"=>"abcd", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123", "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 23.3ms | Allocations: 3320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 6198)
+Completed 200 OK in 140ms (Views: 47.5ms | ActiveRecord: 0.5ms | Allocations: 13054)
+
+
+Started GET "/" for ::1 at 2021-12-06 09:38:12 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 5018)
+Completed 200 OK in 92ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 10673)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 09:38:13 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 34.8ms | Allocations: 7254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 10208)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 2.3ms | Allocations: 10755)
+
+
+Started GET "/" for ::1 at 2021-12-06 09:39:35 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.7ms | Allocations: 5018)
+Completed 200 OK in 147ms (Views: 68.8ms | ActiveRecord: 0.0ms | Allocations: 10674)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 09:39:36 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 55.3ms | Allocations: 7254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 10212)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 1.1ms | Allocations: 10759)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:39:38 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 13.8ms | Allocations: 7568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 10414)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms | Allocations: 10930)
+
+
+Started GET "/" for ::1 at 2021-12-06 09:45:40 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 5018)
+Completed 200 OK in 157ms (Views: 52.8ms | ActiveRecord: 0.0ms | Allocations: 10674)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 09:45:42 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 34.4ms | Allocations: 7255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 10209)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.9ms | Allocations: 10756)
+
+
+Started GET "/student/new" for ::1 at 2021-12-06 09:45:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/new"):
+  
+Started GET "/student/new" for ::1 at 2021-12-06 09:47:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/new"):
+  
+Started GET "/student/new" for ::1 at 2021-12-06 09:47:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/new"):
+  
+Started GET "/student/new" for ::1 at 2021-12-06 09:48:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/new"):
+  
+Started GET "/student/stdView" for ::1 at 2021-12-06 09:48:45 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 40.0ms | Allocations: 9648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 12864)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 1.5ms | Allocations: 14090)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:48:46 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 12.8ms | Allocations: 7457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 10302)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms | Allocations: 10819)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:49:02 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"john", "lname"=>"john", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"1234", "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 24.5ms | Allocations: 3320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 6198)
+Completed 200 OK in 81ms (Views: 41.7ms | ActiveRecord: 0.4ms | Allocations: 10929)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:50:28 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"rrr", "lname"=>"eee", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"12"}, "commit"=>"Create Account"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 676)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/student_controller.rb:17:in `create'
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:52:04 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 9.5ms | Allocations: 5784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 8808)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 9869)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:52:07 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"john", "lname"=>"", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"", "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 5819)
+Completed 200 OK in 63ms (Views: 30.5ms | ActiveRecord: 3.9ms | Allocations: 9863)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:52:22 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"john", "lname"=>"john", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123"}, "commit"=>"Create Account"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 670)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/student_controller.rb:17:in `create'
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:55:07 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 8930)
+Completed 200 OK in 29ms (Views: 28.3ms | Allocations: 9998)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:56:58 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwerty", "lname"=>"zxcvb", "email"=>"qwertyuiop@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"612", "commit"=>"Create Account"}
+Completed 400 Bad Request in 34ms (Allocations: 4492)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:30:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:57:27 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.9ms | Allocations: 5439)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 8285)
+Completed 200 OK in 20ms (Views: 19.6ms | Allocations: 8692)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:57:40 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwert", "lname"=>"qwe", "email"=>"buck1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"9999", "commit"=>"Create Account"}
+Completed 400 Bad Request in 1ms (Allocations: 670)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:30:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started GET "/student/newStd" for ::1 at 2021-12-06 09:57:44 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 8280)
+Completed 200 OK in 29ms (Views: 28.1ms | Allocations: 8686)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:58:24 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwert", "lname"=>"qwe", "email"=>"qwertyuiop@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"9292", "commit"=>"Create Account"}
+Completed 400 Bad Request in 13ms (Allocations: 2458)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:30:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:59:21 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwert", "lname"=>"qwe", "email"=>"qwertyuiop@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"9292", "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5882)
+Completed 200 OK in 95ms (Views: 24.1ms | ActiveRecord: 1.7ms | Allocations: 18536)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 09:59:59 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"qwerty", "lname"=>"uiop", "email"=>"qwertyuiop@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"2609"}, "commit"=>"Create Account"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 665)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:01:12 -0500
+  
+SyntaxError (/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/student_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+app/controllers/student_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+app/controllers/student_controller.rb:38: syntax error, unexpected end-of-input, expecting end
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:01:31 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"qwerty", "lname"=>"uiop", "email"=>"qwertyuiop@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"260933"}, "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 742)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:11:50 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"qwerty", "lname"=>"uiop", "email"=>"qwertyuiop@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"260933"}, "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:20:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 260933], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:20:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "qwertyuiop@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:20:in `create'
+  [1m[36mStudent Create (9.3ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "qwerty"], ["lname", "uiop"], ["buckId", 260933], ["created_at", "2021-12-06 15:11:51.078903"], ["updated_at", "2021-12-06 15:11:51.078903"], ["email", "qwertyuiop@gmail.com"], ["password_digest", "$2a$12$XdthTu2LURaFZxfU3SATcuMVfCj8D3k.YEV0H/CPm18/s3WzA3Pma"]]
+  ↳ app/controllers/student_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:20:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 383ms (Views: 2.7ms | ActiveRecord: 28.5ms | Allocations: 15908)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/student_controller.rb:22:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:12:15 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"qwerty", "lname"=>"uiop", "email"=>"qwertyuiop@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"260933"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 260933], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "qwertyuiop@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 5332)
+Completed 200 OK in 282ms (Views: 11.1ms | ActiveRecord: 2.1ms | Allocations: 18125)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:12:29 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"qwerty", "lname"=>"uiop", "email"=>"qwertyuiop@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"260933"}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 260933], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "qwertyuiop@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5241)
+Completed 200 OK in 340ms (Views: 19.6ms | ActiveRecord: 0.5ms | Allocations: 9441)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:14:03 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"random", "lname"=>"student", "email"=>"random@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"478236"}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 478236], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "random@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Create (9.0ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "random"], ["lname", "student"], ["buckId", 478236], ["created_at", "2021-12-06 15:14:04.268973"], ["updated_at", "2021-12-06 15:14:04.268973"], ["email", "random@gmail.com"], ["password_digest", "$2a$12$XpgJ2drRnCWFeKKbXzPliOZpYwYQnlLab3ZYJKKyTBxhtE.Edcoq6"]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/student_controller.rb:21:in `create'
+Redirected to 
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 21.5ms | Allocations: 11226)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `to_model' for #<Student::ActiveRecord_Relation:0x000055ef984648e8>
+Did you mean?  to_xml):
+  
+app/controllers/student_controller.rb:21:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:16:57 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"random", "lname"=>"student", "email"=>"random@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"478236"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 478236], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "random@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2426)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5306)
+Completed 200 OK in 335ms (Views: 19.9ms | ActiveRecord: 1.5ms | Allocations: 18260)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:17:10 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"random", "lname"=>"student", "email"=>"random@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"4782362"}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 4782362], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "random@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 4652)
+Completed 200 OK in 433ms (Views: 70.0ms | ActiveRecord: 0.5ms | Allocations: 8812)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:17:50 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"first", "lname"=>"last", "email"=>"first@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"284623"}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 284623], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "first@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Create (3.4ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "first"], ["lname", "last"], ["buckId", 284623], ["created_at", "2021-12-06 15:17:50.723665"], ["updated_at", "2021-12-06 15:17:50.723665"], ["email", "first@gmail.com"], ["password_digest", "$2a$12$lWxdvCVEUQE3O8dBwrETte00em8YVhCQQo2oryIBhufkynO2D34re"]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 405ms (ActiveRecord: 13.7ms | Allocations: 9486)
+
+
+  
+NameError (undefined local variable or method `student_index_path' for #<StudentController:0x0055ef97442618>
+Did you mean?  student_stdView_path):
+  
+app/controllers/student_controller.rb:21:in `create'
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:19:04 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 3.6ms | Allocations: 5405)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 8252)
+Completed 200 OK in 13ms (Views: 12.3ms | Allocations: 8801)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:20:02 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqrs", "lname"=>"abcd", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"44857790", "commit"=>"Create Account"}
+Completed 400 Bad Request in 35ms (Allocations: 4486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:31:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:20:23 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqrs", "lname"=>"abcd", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"44857790", "commit"=>"Create Account"}
+Completed 400 Bad Request in 1ms (Allocations: 670)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:31:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:22:03 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqrs", "lname"=>"abcd", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"44857790", "commit"=>"Create Account"}
+Completed 500 Internal Server Error in 18ms (Allocations: 2870)
+
+
+  
+NoMethodError (undefined method `plain' for #<StudentController:0x0055ef96e917f0>):
+  
+app/controllers/student_controller.rb:15:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:22:17 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqrs", "lname"=>"abcd", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"44857790", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 2ms (Views: 1.5ms | Allocations: 523)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:22:21 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqrs", "lname"=>"abcd", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"44857790", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 3ms (Views: 1.2ms | Allocations: 378)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:22:43 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqrs", "lname"=>"abcd", "email"=>"abcdefgh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"44857790", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 3ms (Views: 2.1ms | Allocations: 521)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:22:45 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 8.6ms | Allocations: 5443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 8290)
+Completed 200 OK in 21ms (Views: 20.0ms | Allocations: 8695)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:23:23 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"gqw", "lname"=>"err", "email"=>"qw@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"293840", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 378)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:26:54 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"gqw", "lname"=>"err", "email"=>"qw@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"293840", "commit"=>"Create Account"}
+Completed 500 Internal Server Error in 48147ms (Allocations: 840570)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `ensure in with_renderer'
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:35:01 -0500
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 81.2ms | Allocations: 10306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 134.4ms | Allocations: 15007)
+Completed 200 OK in 191ms (Views: 154.4ms | ActiveRecord: 1.7ms | Allocations: 17457)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:35:17 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 42.6ms | Allocations: 9688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.0ms | Allocations: 12534)
+Completed 200 OK in 83ms (Views: 82.8ms | ActiveRecord: 0.0ms | Allocations: 13049)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:36:02 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"new", "lname"=>"student", "email"=>"new@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"93939", "commit"=>"Create Account"}
+Completed 400 Bad Request in 8ms (Allocations: 2503)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:31:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started GET "/student" for ::1 at 2021-12-06 10:36:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student"):
+  
+Started GET "/" for ::1 at 2021-12-06 10:36:37 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3265)
+Completed 200 OK in 19ms (Views: 17.7ms | Allocations: 4112)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:36:40 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 49.5ms | Allocations: 7585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 10528)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 2.7ms | Allocations: 10942)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:37:41 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.7ms | Allocations: 5445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 8292)
+Completed 200 OK in 16ms (Views: 15.2ms | Allocations: 9005)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:38:23 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+Completed 400 Bad Request in 23ms (Allocations: 4544)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: ):
+  
+app/controllers/student_controller.rb:31:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:38:32 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+Completed 400 Bad Request in 1ms (Allocations: 657)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: ):
+  
+app/controllers/student_controller.rb:31:in `student_params'
+app/controllers/student_controller.rb:17:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:39:55 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 2ms (Views: 1.7ms | Allocations: 623)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:39:59 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 401)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:40:19 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 544)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:40:26 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 544)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:41:28 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"params", "lname"=>"student", "email"=>"params@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"99085", "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 6213)
+Completed 200 OK in 59ms (Views: 19.6ms | ActiveRecord: 1.5ms | Allocations: 19366)
+
+
+Started GET "/" for ::1 at 2021-12-06 10:41:37 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 67)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 3040)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 3471)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:41:39 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 4.4ms | Allocations: 852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3803)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms | Allocations: 4214)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:41:41 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.5ms | Allocations: 5434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 8279)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 8690)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:42:09 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"gautam", "lname"=>"rao", "email"=>"rao1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"95742", "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5814)
+Completed 200 OK in 52ms (Views: 22.6ms | ActiveRecord: 0.5ms | Allocations: 9877)
+
+
+Started GET "/" for ::1 at 2021-12-06 10:42:18 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3015)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:42:20 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.6ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 3783)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms | Allocations: 4197)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:44:09 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 48.6ms | Allocations: 10306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.8ms | Allocations: 15012)
+Completed 200 OK in 138ms (Views: 99.5ms | ActiveRecord: 4.1ms | Allocations: 17462)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 9992], ["LIMIT", 1]]
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "rao1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mStudent Create (5.8ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "gautam"], ["lname", "rao"], ["buckId", 9992], ["created_at", "2021-12-06 15:48:36.955673"], ["updated_at", "2021-12-06 15:48:36.955673"], ["email", "rao1@gmail.com"], ["password_digest", "$2a$12$GKng4hNMcCnfxFhWSAJJtul6Q3sZiIDs04fsuqiVbRAA9h2lLNnfm"]]
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:50:27 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+...t = Student.new(student_params])
+...                              ^):
+  
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:50:36 -0500
+  
+SyntaxError (/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+...t = Student.new(student_params])
+...                              ^):
+  
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+Started GET "/" for ::1 at 2021-12-06 10:50:41 -0500
+  
+SyntaxError (/home/grao/rails_work/AnimeProfilePicsFinalProject/final/app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+...t = Student.new(student_params])
+...                              ^):
+  
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+app/controllers/student_controller.rb:18: syntax error, unexpected ']', expecting ')'
+Started GET "/" for ::1 at 2021-12-06 10:50:58 -0500
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 5056)
+Completed 200 OK in 48ms (Views: 29.1ms | Allocations: 10093)
+
+
+Started GET "/student/stdView" for ::1 at 2021-12-06 10:51:00 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 59.1ms | Allocations: 8287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.3ms | Allocations: 11244)
+Completed 200 OK in 85ms (Views: 79.5ms | ActiveRecord: 1.6ms | Allocations: 11791)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:51:03 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 26.5ms | Allocations: 7572)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 10417)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 10933)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:51:33 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqr", "lname"=>"stuv", "email"=>"pqrstuv@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123459", "commit"=>"Create Account"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 714)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:30:in `student_params'
+app/controllers/student_controller.rb:18:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:55:11 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqr", "lname"=>"stuv", "email"=>"pqrstuv@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123459", "commit"=>"Create Account"}
+Completed 400 Bad Request in 5ms (Allocations: 2483)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student
+Did you mean?  authenticity_token
+               action
+               buckId
+               password_confirmation):
+  
+app/controllers/student_controller.rb:30:in `student_params'
+app/controllers/student_controller.rb:18:in `create'
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:55:56 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqr", "lname"=>"stuv", "email"=>"pqrstuv@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123459", "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:18:in `create'
+No template found for StudentController#create, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 1.0ms | Allocations: 9949)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:56:02 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqr", "lname"=>"stuv", "email"=>"pqrstuv@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123459", "commit"=>"Create Account"}
+No template found for StudentController#create, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 360)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:56:31 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqr", "lname"=>"stuv", "email"=>"pqrstuv@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"123459", "commit"=>"Create Account"}
+No template found for StudentController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:56:59 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"pqr", "lname"=>"stuv", "email"=>"pqrstuv@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"1234592", "commit"=>"Create Account"}
+No template found for StudentController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/student/newStd" for ::1 at 2021-12-06 10:58:21 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 3.2ms | Allocations: 5405)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8252)
+Completed 200 OK in 15ms (Views: 13.9ms | Allocations: 8801)
+
+
+Started POST "/student/newStd" for ::1 at 2021-12-06 10:58:40 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"qwt", "lname"=>"asd", "email"=>"buc1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"126", "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+No template found for StudentController#create, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 2.5ms | Allocations: 8664)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 11:07:28 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 5018)
+Completed 200 OK in 129ms (Views: 60.7ms | ActiveRecord: 0.0ms | Allocations: 10669)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:07:29 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 31.4ms | Allocations: 7332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 10286)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.9ms | Allocations: 10833)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:07:31 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 12.5ms | Allocations: 7568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 10412)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 10926)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:08:14 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"asdf", "lname"=>"ghjkl", "email"=>"asdfghjkl@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"34567", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 34567], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "asdfghjkl@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Create (5.6ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "asdf"], ["lname", "ghjkl"], ["buckId", 34567], ["created_at", "2021-12-06 16:08:14.811213"], ["updated_at", "2021-12-06 16:08:14.811213"], ["email", "asdfghjkl@gmail.com"], ["password_digest", "$2a$12$GeEiAKzNq9NsRRG124HZTeQ7SuXQuSYN7bEcy4G1DZ7IomVBTiev6"]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 448ms (ActiveRecord: 18.4ms | Allocations: 12454)
+
+
+  
+NameError (undefined local variable or method `student_index_path' for #<StudentController:0x0055effd094bb8>
+Did you mean?  student_stdView_path):
+  
+app/controllers/student_controller.rb:19:in `create'
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:08:55 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"asdf", "lname"=>"ghjkl", "email"=>"asdfghjkl@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"34567", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 34567], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "asdfghjkl@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 20.0ms | Allocations: 2759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 5755)
+Completed 200 OK in 420ms (Views: 34.1ms | ActiveRecord: 7.7ms | Allocations: 19029)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:09:08 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"asdf", "lname"=>"ghjkl", "email"=>"asdfghjkl@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"34567"}, "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :student, :commit[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 5899)
+Completed 200 OK in 73ms (Views: 35.3ms | ActiveRecord: 0.4ms | Allocations: 10016)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:10:32 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"student", "lname"=>"one", "email"=>"stuone@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"45638"}, "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :student, :commit[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 5814)
+Completed 200 OK in 74ms (Views: 40.4ms | ActiveRecord: 0.4ms | Allocations: 9930)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:11:39 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"fname"=>"stude", "lname"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>""}, "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :student, :commit[0m
+Completed 400 Bad Request in 10ms (Allocations: 2529)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: {}
+Did you mean?  action
+               controller
+               commit
+               student):
+  
+app/controllers/student_controller.rb:16:in `create'
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:11:43 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.8ms | Allocations: 5443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 8291)
+Completed 200 OK in 46ms (Views: 44.9ms | Allocations: 8837)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:12:21 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"stude", "lname"=>"two", "email"=>"student2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"9283", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 400 Bad Request in 5ms (Allocations: 948)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: {"fname"=>"stude", "lname"=>"two", "email"=>"student2@gmail.com", "password"=>"student1234", "password_confirmation"=>"student1234", "buckId"=>"9283"}
+Did you mean?  fname
+               action
+               commit
+               email):
+  
+app/controllers/student_controller.rb:16:in `create'
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:13:10 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"stude", "lname"=>"two", "email"=>"student2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"9283", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 9283], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "student2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Create (5.5ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "stude"], ["lname", "two"], ["buckId", 9283], ["created_at", "2021-12-06 16:13:10.740473"], ["updated_at", "2021-12-06 16:13:10.740473"], ["email", "student2@gmail.com"], ["password_digest", "$2a$12$J4dkBh4tgo0Ym/BQYyC39.ch082/Pp2nL7u4ig7vbC.BVxAas6OM6"]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 329ms (ActiveRecord: 26.9ms | Allocations: 15247)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:13:10 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 11.7ms | Allocations: 941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 3895)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms | Allocations: 4446)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-06 11:13:15 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 4.9ms | Allocations: 5434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 8279)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 8698)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-06 11:13:52 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"student ", "lname"=>"three", "email"=>"stud3@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "buckId"=>"2222", "commit"=>"Create Account"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" = ? LIMIT ?[0m  [["buckId", 2222], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "stud3@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mStudent Create (17.6ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "buckId", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "student "], ["lname", "three"], ["buckId", 2222], ["created_at", "2021-12-06 16:13:52.793846"], ["updated_at", "2021-12-06 16:13:52.793846"], ["email", "stud3@yahoo.com"], ["password_digest", "$2a$12$z0L7Q5haguxByieObhBaE.HXfd2.GLbTIaUiVsl3kZjh0TZQUFWT6"]]
+  ↳ app/controllers/student_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 497ms (ActiveRecord: 30.8ms | Allocations: 6632)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 11:13:52 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 5.3ms | Allocations: 892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 3843)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms | Allocations: 4256)
+
+

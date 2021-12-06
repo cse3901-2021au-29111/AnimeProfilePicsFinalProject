@@ -1,25 +1,42 @@
 
 <h1>New Student</h1>
 
-<%=  form_with model: @student do |form| %>
-  <div>
-    <%= form.label :fname %><br>
-    <%= form.text_field :fname %>
+<%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
+    
+    <div>
+      <%= form.label :fname%><br>
+      <%= form.text_field :fname, class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :lname%><br>
+      <%= form.text_field :lname, class: "form-control" %>
+    </div>
+    
+    <div>
+      <%= form.label :email %><br>
+      <%= form.text_field :email,  class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :password %> <br>
+      <%= form.password_field :password , class: "form-control"%>
   </div>
 
-  <div>
-    <%= form.label :lname %><br>
-    <%= form.text_field :lname %>
-  </div>
 
   <div>
-    <%= form.label :email %><br>
-    <%= form.text_field :email %>
+      <%= form.label :password_confirmation, "Confirmation" %> <br>
+      <%= form.password_field :password_confirmation, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+    <div>
+    <%= form.label :buckId %> <br>
+    <%= form.text_field :buckId , class: "form-control"%>
   </div>
+
+    <br>
+    <div>
+      <%= form.submit "Create Account" %>
+    </div>
 
 <% end %>
-
