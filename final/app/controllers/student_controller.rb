@@ -15,6 +15,8 @@ class StudentController <  ApplicationController
     
     @student = Student.new(student_params)
     if @student.save
+      #login after sign up
+      log_in @student
       flash[:success] = "You have successfully signed up!"
       redirect_to student_stdView_path
        # Handle a successful save.
