@@ -4,7 +4,7 @@ class RosterController <  ApplicationController
   end
 
   def show
-    @roster = Roster.find(params[:section_id])
+    @roster = Roster.find(params[:id])
   end
 
   def new
@@ -19,10 +19,14 @@ class RosterController <  ApplicationController
   end
 
   def update
-
   end
 
   def edit
-
   end
+
+  def destroy
+    Team.find(params[:id]).destroy
+    redirect_to roster_index_path
+  end
+
 end

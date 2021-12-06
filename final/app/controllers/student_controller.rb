@@ -19,6 +19,11 @@ class StudentController <  ApplicationController
   def edit
   end
 
+  def destroy
+    Student.find(params[:id]).destroy
+    redirect_to student_stdView_path
+  end
+
   def update
   end
 end

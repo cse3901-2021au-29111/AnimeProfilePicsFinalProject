@@ -4,15 +4,18 @@ Rails.application.routes.draw do
   get 'student/newStd'
   get '/student/:id', to: 'student#currentStd'
   post "student/newStd", to: "student#create"
+  delete 'student/:id', to: 'student#destroy'
 
   get 'team/index'
   get 'team/newTeam'
+  get 'team/:id', to: 'team#currentTeam'
   post 'team/newTeam', to: "team#create"
+  delete 'team/:id', to: 'team#destroy'
 
   get 'roster/index'
   get 'roster/newRost'
   post 'roster/newRost', to: "roster#create"
 
   root to: "student#index"
-
+  resources :student
 end
