@@ -1,3 +1,4 @@
+
 <style>
 input[type=text], select {
   padding: 12px 20px;
@@ -21,7 +22,6 @@ input[type=submit]:hover {
 }
 </style>
 
-
 <h1>New Student</h1>
 
 <%=  form_with model: @student do |form| %>
@@ -43,8 +43,6 @@ input[type=submit]:hover {
   <div>
     <%= form.submit %>
   </div>
-
+  
+    <p>Existing user? <%= link_to "login up now!", session_new_path %></p>
 <% end %>
-
-    <p>Existing user? <%= link_to "login up now!", sessions_loginPage_path %></p>
-

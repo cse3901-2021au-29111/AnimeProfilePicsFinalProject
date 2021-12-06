@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+  
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+=======
 
   #Routes for sessions
   get 'sessions/loginPage'
 
   # Routes for Students
+>>>>>>> 59c16b1ba75dc72c0cb458c17fc8186dc84d5acb
   get 'student/stdView'
   get 'student/newStd'
   get '/student/:id', to: 'student#currentStd'
@@ -25,9 +30,10 @@ Rails.application.routes.draw do
   #delete 'roster/:id', to: 'roster#destroy'
 
   #Routes for sessions
-  get '/login', to: 'sessions#loginPage'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/login', to: 'session#new'
+  post '/login', to: 'session#create'
+  delete '/logout', to: 'session#destroy'
+  get 'session/new'
 
   #Routes for evaluations
   get 'evaluation/index'
