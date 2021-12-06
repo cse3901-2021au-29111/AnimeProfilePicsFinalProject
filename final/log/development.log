@@ -4315,3 +4315,80 @@ Processing by StudentController#stdView as HTML
 Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 4483)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:24:07 -0500
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 481)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ryaee/Desktop/3901Workspace/AnimeProfilePicsFinalProject/final/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 3238ms
+Built at: 12/06/2021 12:24:13 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 6206.1ms | Allocations: 14396)
+Completed 200 OK in 6308ms (Views: 6220.4ms | ActiveRecord: 0.0ms | Allocations: 22324)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 12:24:26 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 5010)
+Completed 200 OK in 51ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 10867)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:24:28 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 29.1ms | Allocations: 7259)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 10213)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 2.3ms | Allocations: 10764)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2021-12-06 12:24:29 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"12"}
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:3
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4639)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5155)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-06 12:24:30 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.3ms | Allocations: 762)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3714)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 4129)
+
+
