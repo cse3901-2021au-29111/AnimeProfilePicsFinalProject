@@ -4,7 +4,7 @@ class TeamController <  ApplicationController
   end
 
   def show
-    @team = Team.find(params[:id])
+    @team = Team.find(params[:section_id])
   end
 
   def new

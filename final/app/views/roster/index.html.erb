@@ -1,8 +1,19 @@
 <h1>Roster List:</h1>
-<ul>
-  <% Student.all.each do |student| %>
-  <li>
-    <%= student.fname %> " " <%= student.lname %>
-  </li>
+
+<table>
+  <% @rosters = Roster.all %>
+
+  <tr>
+    <th>Std ID</th>
+    <th>Team ID</th>
+  </tr>
+
+  <% @rosters.each do |roster| %>
+  <tr>
+      <td><%= roster.student_id %></td>
+      <td><%= roster.team_id %></td>
+  </tr>
   <% end %>
-</ul>
+    </table>
+
+<%= link_to "new roster", roster_newRost_path %>

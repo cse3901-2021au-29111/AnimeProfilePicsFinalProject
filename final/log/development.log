@@ -3480,3 +3480,793 @@ Did you mean?  team_new_path):
     6:     <%= form.text_field :tName %>
   
 app/views/team/new.html.erb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/team/new" for 127.0.0.1 at 2021-12-05 22:23:44 -0500
+Processing by TeamController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/team_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering team/new.html.erb within layouts/application
+  Rendered team/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2720)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2802)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms | Allocations: 8933)
+
+
+  
+ActionView::Template::Error (undefined method `teams_path' for #<ActionView::Base:0x00564d4c7fd678>
+Did you mean?  team_new_path):
+    1: <h1>New Team</h1>
+    2: 
+    3: <%= form_with model: @team do |form| %>
+    4:   <div>
+    5:     <%= form.label :tName %><br>
+    6:     <%= form.text_field :tName %>
+  
+app/views/team/new.html.erb:3
+Started GET "/" for 127.0.0.1 at 2021-12-05 22:27:46 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 5018)
+Completed 200 OK in 47ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 10542)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:27:51 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 25.6ms | Allocations: 7229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 10182)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.6ms | Allocations: 10727)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:27:54 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 24.1ms | Allocations: 5331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 8175)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 8689)
+
+
+Started GET "/team/" for 127.0.0.1 at 2021-12-05 22:28:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/team"):
+  
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:28:04 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4042)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.2ms | Allocations: 6642)
+
+
+Started GET "/team/new" for 127.0.0.1 at 2021-12-05 22:28:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/team/new"):
+  
+Started GET "/team/new" for 127.0.0.1 at 2021-12-05 22:28:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/team/new"):
+  
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:28:27 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4017)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.1ms | Allocations: 5176)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:28:34 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3684)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms | Allocations: 4109)
+
+
+Started GET "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:28:36 -0500
+Processing by TeamController#newTeam as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/newTeam.html.erb within layouts/application
+  Rendered team/newTeam.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4502)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5016)
+
+
+Started GET "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:29:19 -0500
+Processing by TeamController#newTeam as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/newTeam.html.erb within layouts/application
+  Rendered team/newTeam.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1436)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4460)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 5523)
+
+
+Started POST "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:29:27 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/team/newTeam"):
+  
+Started GET "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:29:58 -0500
+Processing by TeamController#newTeam as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/newTeam.html.erb within layouts/application
+  Rendered team/newTeam.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4486)
+Completed 200 OK in 22ms (Views: 21.3ms | Allocations: 5036)
+
+
+Started POST "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:30:01 -0500
+Processing by TeamController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tName"=>"AnimePps", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/team_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/team_controller.rb:15:in `create'
+  [1m[36mTeam Create (19.9ms)[0m  [1m[32mINSERT INTO "teams" ("created_at", "updated_at", "tName") VALUES (?, ?, ?)[0m  [["created_at", "2021-12-06 03:30:01.087077"], ["updated_at", "2021-12-06 03:30:01.087077"], ["tName", "AnimePps"]]
+  ↳ app/controllers/team_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/team_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/team/index
+Completed 302 Found in 60ms (ActiveRecord: 35.0ms | Allocations: 11203)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:30:01 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3885)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 4437)
+
+
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/" for 127.0.0.1 at 2021-12-05 22:38:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student"):
+  
+Started GET "/student/index" for 127.0.0.1 at 2021-12-05 22:38:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/index"):
+  
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:38:53 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/student/stdView.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 30.3ms | Allocations: 9150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 12246)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.8ms | Allocations: 13397)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:38:55 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 6063)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 6577)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-05 22:39:05 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Mike", "lname"=>"Yam", "email"=>"21", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "21"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 68ms (ActiveRecord: 0.6ms | Allocations: 4448)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:39:05 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 2.3ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3691)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 4097)
+
+
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:39:55 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5823)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-05 22:40:11 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Mike", "lname"=>"Y", "email"=>"mikey@buckeyemail.osu.edu", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "mikey@buckeyemail.osu.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms | Allocations: 3933)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:40:11 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.9ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3689)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4094)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:40:13 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5828)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-05 22:40:22 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Mike", "lname"=>"yam", "email"=>"camjan0624@gmail.com", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."buckId" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "camjan0624@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 20ms (ActiveRecord: 0.7ms | Allocations: 3936)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:40:22 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 4.0ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3689)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 4094)
+
+
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:41:31 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 1.7ms | Allocations: 3346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 6192)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 6746)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-05 22:41:38 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"Mike", "lname"=>"y", "email"=>"camjan0624@gmail.com", "commit"=>"Save "}
+Completed 500 Internal Server Error in 11ms (Allocations: 2280)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/student.rb:5:in `<class:Student>'
+app/models/student.rb:1:in `<main>'
+app/controllers/student_controller.rb:15:in `create'
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:41:56 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3351)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 6198)
+Completed 200 OK in 12ms (Views: 11.0ms | Allocations: 6748)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-05 22:42:03 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"mike", "lname"=>"y", "email"=>"camjan0624@gmail.com", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "camjan0624@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Create (4.2ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "created_at", "updated_at", "email") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "mike"], ["lname", "y"], ["created_at", "2021-12-06 03:42:03.642887"], ["updated_at", "2021-12-06 03:42:03.642887"], ["email", "camjan0624@gmail.com"]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (25.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 86ms (ActiveRecord: 31.3ms | Allocations: 16199)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:42:03 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 3.1ms | Allocations: 803)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3753)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 4500)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-05 22:42:06 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5823)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started POST "/student/newStd" for 127.0.0.1 at 2021-12-05 22:42:15 -0500
+Processing by StudentController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "fname"=>"yuchen", "lname"=>"theman", "email"=>"123@gmail.com", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mStudent Create (17.6ms)[0m  [1m[32mINSERT INTO "students" ("fname", "lname", "created_at", "updated_at", "email") VALUES (?, ?, ?, ?, ?)[0m  [["fname", "yuchen"], ["lname", "theman"], ["created_at", "2021-12-06 03:42:15.153547"], ["updated_at", "2021-12-06 03:42:15.153547"], ["email", "123@gmail.com"]]
+  ↳ app/controllers/student_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/student_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/student/stdView
+Completed 302 Found in 73ms (ActiveRecord: 31.5ms | Allocations: 5587)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-05 22:42:15 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 2.6ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3726)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 4132)
+
+
+Started GET "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:42:29 -0500
+Processing by TeamController#newTeam as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/newTeam.html.erb within layouts/application
+  Rendered team/newTeam.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4244)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 5150)
+
+
+Started POST "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:42:32 -0500
+Processing by TeamController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tName"=>"TheBoys", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/team_controller.rb:15:in `create'
+  [1m[36mTeam Create (8.4ms)[0m  [1m[32mINSERT INTO "teams" ("created_at", "updated_at", "tName") VALUES (?, ?, ?)[0m  [["created_at", "2021-12-06 03:42:33.031379"], ["updated_at", "2021-12-06 03:42:33.031379"], ["tName", "TheBoys"]]
+  ↳ app/controllers/team_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/team_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/team/index
+Completed 302 Found in 96ms (ActiveRecord: 27.2ms | Allocations: 9780)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:42:33 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3889)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 4443)
+
+
+Started GET "/team/newTeam" for 127.0.0.1 at 2021-12-05 22:43:17 -0500
+Processing by TeamController#newTeam as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/newTeam.html.erb within layouts/application
+  Rendered team/newTeam.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 4111)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 4518)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:43:19 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3695)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 4112)
+
+
+Started GET "/student//stdView" for 127.0.0.1 at 2021-12-05 22:43:24 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:5
+  Rendered student/stdView.html.erb within layouts/application (Duration: 4.2ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3736)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 4142)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:43:30 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3694)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 4111)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-05 22:52:51 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/team/index.html.erb:5
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:5
+  Rendered team/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 5014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 8105)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.7ms | Allocations: 10850)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:52:55 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3074)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4611)
+
+
+Started GET "/roster/newRoster" for 127.0.0.1 at 2021-12-05 22:52:57 -0500
+  
+AbstractController::ActionNotFound (The action 'newRoster' could not be found for RosterController):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/roster/newRoster" for 127.0.0.1 at 2021-12-05 22:53:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/roster/newRoster"):
+  
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:53:49 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3249)
+Completed 200 OK in 27ms (Views: 10.6ms | Allocations: 5091)
+
+
+Started GET "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:53:50 -0500
+Processing by RosterController#newRost as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/newRost.html.erb within layouts/application
+  Rendered roster/newRost.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2754)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5598)
+Completed 200 OK in 12ms (Views: 11.6ms | Allocations: 6112)
+
+
+Started POST "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:55:08 -0500
+Processing by RosterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student_id"=>"1", "team_id"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/roster/index
+Completed 302 Found in 83ms (ActiveRecord: 2.4ms | Allocations: 20030)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:55:08 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 67)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3018)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3437)
+
+
+  [1m[36mRoster Load (0.5ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:55:40 -0500
+Processing by RosterController#newRost as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/newRost.html.erb within layouts/application
+  Rendered roster/newRost.html.erb within layouts/application (Duration: 1.0ms | Allocations: 2123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4968)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 5379)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRoster Load (0.1ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:57:54 -0500
+Processing by RosterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student_id"=>"12", "team_id"=>"1", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mRoster Create (0.6ms)[0m  [1m[32mINSERT INTO "rosters" ("team_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 1], ["student_id", 12], ["created_at", "2021-12-06 03:57:54.602911"], ["updated_at", "2021-12-06 03:57:54.602911"]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/roster/index
+Completed 302 Found in 56ms (ActiveRecord: 10.7ms | Allocations: 11300)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:57:54 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3015)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+  [1m[36mRoster Load (0.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:58:22 -0500
+Processing by RosterController#newRost as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/newRost.html.erb within layouts/application
+  Rendered roster/newRost.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4969)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 5382)
+
+
+Started POST "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:58:26 -0500
+Processing by RosterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student_id"=>"13", "team_id"=>"2", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mRoster Create (0.7ms)[0m  [1m[32mINSERT INTO "rosters" ("team_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 2], ["student_id", 13], ["created_at", "2021-12-06 03:58:26.571610"], ["updated_at", "2021-12-06 03:58:26.571610"]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (60.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/roster/index
+Completed 302 Found in 128ms (ActiveRecord: 61.3ms | Allocations: 6505)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:58:26 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3015)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+Started GET "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:58:28 -0500
+Processing by RosterController#newRost as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/newRost.html.erb within layouts/application
+  Rendered roster/newRost.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 4965)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 5376)
+
+
+Started POST "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:58:32 -0500
+Processing by RosterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student_id"=>"14", "team_id"=>"1", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mRoster Create (22.0ms)[0m  [1m[32mINSERT INTO "rosters" ("team_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 1], ["student_id", 14], ["created_at", "2021-12-06 03:58:32.062603"], ["updated_at", "2021-12-06 03:58:32.062603"]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (44.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/roster/index
+Completed 302 Found in 114ms (ActiveRecord: 66.8ms | Allocations: 6499)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:58:32 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3015)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+Started GET "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:58:33 -0500
+Processing by RosterController#newRost as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/newRost.html.erb within layouts/application
+  Rendered roster/newRost.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4969)
+Completed 200 OK in 47ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 5382)
+
+
+Started POST "/roster/newRost" for 127.0.0.1 at 2021-12-05 22:58:37 -0500
+Processing by RosterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student_id"=>"14", "team_id"=>"2", "commit"=>"Save "}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mRoster Create (10.3ms)[0m  [1m[32mINSERT INTO "rosters" ("team_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 2], ["student_id", 14], ["created_at", "2021-12-06 03:58:37.939711"], ["updated_at", "2021-12-06 03:58:37.939711"]]
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/roster_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/roster/index
+Completed 302 Found in 49ms (ActiveRecord: 20.2ms | Allocations: 6499)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 22:58:38 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  Rendered roster/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3015)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+  [1m[36mRoster Load (0.1ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-05 23:01:58 -0500
+Processing by RosterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mRoster Load (0.1ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters"[0m
+  ↳ app/views/roster/index.html.erb:11
+  Rendered roster/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4137)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 5302)
+
+
