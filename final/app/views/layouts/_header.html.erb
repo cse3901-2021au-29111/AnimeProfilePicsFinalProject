@@ -1,20 +1,49 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul>
-        <li class="nav-item">
-          <%= link_to "Home", root_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Student View", student_stdView_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Team List", team_index_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Roster List", roster_index_path %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">  
+  <a>
+    <%= link_to "Home", root_path %>
+  </a>
+  <a>
+    <%= link_to "Student View", student_stdView_path %>
+  </a>
+  <a>
+    <%= link_to "Team List", team_index_path %>
+  </a>
+  <a>
+    <%= link_to "Roster List", roster_index_path %>
+  </a>
+      
+</div>
+</body>
