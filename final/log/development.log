@@ -17316,3 +17316,12 @@ Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.2ms | Allocations: 570
 >>>>>>> 1f29a4d5f0be92f74350af740214cce3516884d8
   [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? AND "students"."id" != ? LIMIT ?[0m  [["email", "123@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[36mStudent Update (0.4ms)[0m  [1m[33mUPDATE "students" SET "updated_at" = ?, "is_admin" = ? WHERE "students"."id" = ?[0m  [["updated_at", "2021-12-06 23:02:59.234324"], ["is_admin", 1], ["id", 6]]
+  [1m[36mTRANSACTION (41.5ms)[0m  [1m[36mcommit transaction[0m
