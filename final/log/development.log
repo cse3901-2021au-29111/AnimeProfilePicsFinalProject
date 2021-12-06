@@ -17434,3 +17434,6 @@ Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.2ms | Allocations: 570
   [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
 >>>>>>> origin/frontend
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTeamLab Load (0.5ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTeamLab Destroy (9.6ms)[0m  [1m[31mDELETE FROM "team_labs"[0m

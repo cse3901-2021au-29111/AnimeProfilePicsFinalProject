@@ -1,0 +1,19 @@
+<h1>Team Labs:</h1>
+
+<table>
+  <% @teams = Team.all %>
+  <% @teams.each do |team| %>
+    <tr>
+      <th>
+        <%= team.tName %>
+      </th>
+        <% team.labs.each do |lab| %>
+          <td>
+            |<%= lab.lab_name %>
+          </td>
+        <% end %>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to "Assign Teams Labs", team_labs_newTeamLab_path %>

@@ -39,6 +39,13 @@ Rails.application.routes.draw do
   post 'lab/newLab', to: 'lab#create'
   delete 'lab/:id', to: 'lab#destroy'
 
+  #Routs for TeamLabs
+  get 'team_labs/index'
+  get 'team_labs/newTeamLab'
+  #get 'roster/:id', to: 'roster#currentRost'
+  post 'team_labs/newTeamLab', to: "team_labs#create"
+  #delete 'roster/:id', to: 'roster#destroy'
+
   root to: "student#index"
   resources :student
   resources :team

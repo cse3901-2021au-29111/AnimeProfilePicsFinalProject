@@ -12,10 +12,10 @@ class TeamLabsController < ApplicationController
   end
 
   def create
-    params[:student_ids].each do |student|
-      TeamLab.create(team_id: params[:team_id], student_id: student)
+    params[:lab_ids].each do |lab|
+      TeamLab.create(team_id: params[:team_id], lab_id: lab)
     end
-    redirect_to roster_index_path
+    redirect_to team_labs_index_path
   end
 
   def update
@@ -26,6 +26,6 @@ class TeamLabsController < ApplicationController
 
   def destroy
     TeamLab.find(params[:id]).destroy
-    redirect_to roster_index_path
+    redirect_to team_labs_index_path
   end
 end
