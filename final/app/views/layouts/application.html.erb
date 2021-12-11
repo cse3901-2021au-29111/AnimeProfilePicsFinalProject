@@ -8,26 +8,15 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-<<<<<<< HEAD
-    
-        
-        
-
-=======
-  <p> <% if logged_in? %>
-      Logged in as: <%= @current_student.email%>
-      <% end %>
-<br> </p>
->>>>>>> 59c16b1ba75dc72c0cb458c17fc8186dc84d5acb
+  
+ </p>
     <%= render :partial => "layouts/header" %>
+    <%= render :partial => "layouts/formstyle" %>
     <%= yield %>
-    <p> <% if logged_in? %>
-            Logged in as: <%= @current_student.email%>
-            <% end %>
-            <br> 
-    </p>
+    
   </body>
 </html>

@@ -2,12 +2,15 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: rgb(89,191,181);
 }
+
 
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
+
 
 .topnav a {
   float: left;
@@ -18,24 +21,96 @@ body {
   font-size: 17px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
+.topnav a:hover, .dropdown:hover .dropbtn{
+  background-color: #aad;
   color: black;
 }
+
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  padding: 14px 30px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-size: 17px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  color: black;
+ 
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 17px;
+  background-color: inherit;
+}
+.dropdown-content a:hover {
+  background-color: white;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
 </style>
 </head>
 
 <body>
-<div class="topnav">  
+<p align = "center"> <% if logged_in? %>
+      Logged in as: <%= @current_student.email%>
+      <% end %>
+ </p>
+
+<div class="topnav ">  
     <%= link_to "Home", root_path %>
     <%= link_to "Student View", student_stdView_path %>
     <%= link_to "Team List", team_index_path %>
+    
   </a>
-  <% if logged_in? && @current_student.is_admin? %>
+     <% if logged_in? && @current_student.is_admin? %>
   <a>
     <%= link_to "Roster List", roster_index_path %>
   </a>
     <% end %>
+    
+    <div class ="dropdown">
+      <% if logged_in? %>
+            <button class="dropbtn">Profile 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <%= link_to "Your page", @current_student %>
+              <%= link_to "Log out", logout_path, method: :delete %> 
+            </div>
+      <% else %>
+          <%= link_to "Sign Up", student_newStd_path %>
+      <%end%>
+    </div>
+    
 
 </div>
+
+
 </body>
+
+

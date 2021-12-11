@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_12_06_224309) do
-=======
-ActiveRecord::Schema.define(version: 2021_12_06_214747) do
->>>>>>> 59c16b1ba75dc72c0cb458c17fc8186dc84d5acb
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"

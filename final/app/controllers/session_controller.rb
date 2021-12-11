@@ -1,4 +1,5 @@
 class SessionController < ApplicationController
+  
   def new
     @session = Session.new
   end
@@ -18,5 +19,7 @@ class SessionController < ApplicationController
 
 
   def destroy
+    session[:email] = nil
+    redirect_to student_newStd_path, notice: "Logged out"
   end
 end

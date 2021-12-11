@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-=======
 
-  #Routes for sessions
-  get 'sessions/loginPage'
-
-  # Routes for Students
->>>>>>> 59c16b1ba75dc72c0cb458c17fc8186dc84d5acb
   get 'student/stdView'
   get 'student/newStd'
   get '/student/:id', to: 'student#currentStd'
@@ -56,6 +47,10 @@ Rails.application.routes.draw do
   get 'evaluation/index'
   get 'evaluation/newEval'
   post 'evaluation/newEval', to: "evaluation#create"
+
+  #Routes for password
+  get "password", to: "passwords#edit"
+  patch "password", to: "passwords#update"
 
   root to: "student#index"
   resources :student
