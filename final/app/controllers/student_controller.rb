@@ -21,12 +21,15 @@ class StudentController <  ApplicationController
       redirect_to student_stdView_path
        # Handle a successful save.
     else
+
       render 'newStd'
+      flash[alert] = "Error with sign up"
+
     end
   end
 
   def student_params
-    params.permit(:fname, :lname, :email, :password, :password_confirmation, :buckId)
+    params.permit(:fname, :lname, :email, :password, :password_confirmation, :buckId, :is_admin)
   end
 
   def destroy

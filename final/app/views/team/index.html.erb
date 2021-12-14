@@ -31,6 +31,7 @@
       <th>Team Names</th>
     </tr>
   <% @teams.each do |team| %>
+    <% if logged_in? && (@current_student.is_admin? || @current_student.teams.include?(team)) %>
     <tr>
       <td><%= team.tName %></td>
       <td><a href = "/team/<%=team.id%>">Show</a></td>
@@ -42,7 +43,10 @@
       </td>
         <% end %>
     </tr>
+      <% end %>
   <% end %>
 </table>
 <br>
-<%= link_to "create team", team_newTeam_path %>
+<% if logged_in? && @current_student.is_admin? %>
+  <%= link_to "create team", team_newTeam_path %>
+<% end %>
