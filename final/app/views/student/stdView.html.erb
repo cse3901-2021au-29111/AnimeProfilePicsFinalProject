@@ -22,7 +22,7 @@
 </style>
 
 
-<h1>List of Students</h1>
+<h1>All Current Students</h1>
 <% @students = Student.all %>
 <table class="styled-table">
 
@@ -40,11 +40,13 @@
         <td><%= student.lname %></td>
         <td><%= student.email %></td>
         <td><a href = "/student/<%=student.id%>">Show</td>
-        <% if logged_in? && @current_student.is_admin? %>
-        <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
-        <td><%= link_to "Destroy", "/student/#{student.id}",
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></td>
+        <% if logged_in? && @current_student.id == student.id%>
+            <td><%= link_to "Edit", "/student/#{student.id}/edit"%></td>
+        <%end%>
+        <% if logged_in? && @current_student.is_admin? && @current_student.id != student.id%>
+            <td><%= link_to "Destroy", "/student/#{student.id}",
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %></td>
         <% end %>
     </tr>
   <% end %>

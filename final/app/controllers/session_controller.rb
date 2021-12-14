@@ -9,6 +9,7 @@ class SessionController < ApplicationController
     if student && student.authenticate(params[:session][:password])
       #redirect_to_student_index
       log_in(student)
+      redirect_to evaluation_assignedEval_path
       
     else
       #need css for flash in sign up and login
