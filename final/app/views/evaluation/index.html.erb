@@ -10,7 +10,7 @@
           <% @evaluations = student.evaluations %>
           <% @evaluations.each do |eval| %>
           <li>
-            <%= eval.rating + "" + eval.evaluated_id %>
+            <%= eval.rating%>
           </li>
           <% end %>
         </ul>

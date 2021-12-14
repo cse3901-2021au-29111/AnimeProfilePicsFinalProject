@@ -95,11 +95,12 @@ body {
     
     <div class ="dropdown">
       <% if logged_in? %>
-            <button class="dropbtn">Profile 
+            <button class="dropbtn"> <%=@current_student.fname%>
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
               <%= link_to "Your page", @current_student %>
+              <%= link_to "Assigned Evaluation", evaluation_assignedEval_path%>
               <%= link_to "Log out", logout_path, method: :delete %> 
             </div>
       <% else %>

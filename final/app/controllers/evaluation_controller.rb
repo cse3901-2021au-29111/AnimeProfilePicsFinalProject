@@ -1,5 +1,5 @@
-
 class EvaluationController < ApplicationController
+
   def index
     @evaluations = Evaluation.all
   end
@@ -12,9 +12,25 @@ class EvaluationController < ApplicationController
     @evaluation = Evaluation.new
   end
 
+  def evaluation_param
+    params.permit(:evaluator_id, :evaluated_id, :lab_id, :comment, :rating)
+  end
+
+  def labEval
+    @evaluatee = params[:evaluated_id]
+    @evaluator = params[:evaluator_id]
+    @labID = params[:lab_id]
+  end
+
   def create
-    @evaluation = Evaluation.create(comment: params[:comment])
-    redirect_to evaluation_index_path
+    @evaluation = Evaluation.new(evaluation_param)
+    if @evaluation.save
+      flash[:success] = "New evaluation added!"
+      redirect_to evaluation_index_path
+       # Handle a successful save.
+    else
+      render 'assignedEval'
+    end
   end
 
   def destroy

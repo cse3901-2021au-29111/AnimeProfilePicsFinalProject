@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  #Routes for students
   get 'student/stdView'
   get 'student/newStd'
   get '/student/:id', to: 'student#currentStd'
   post "student/newStd", to: "student#create"
   delete 'student/:id', to: 'student#destroy'
+  put 'student/:id', to: 'student#update'
 
   #Routes for teams
   get 'team/index'
@@ -26,9 +28,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'session#destroy'
   get 'session/new'
 
-  #Routes for evaluations
-  get 'evaluation/index'
-
   #Routes for labs
   get 'lab/index'
   get 'lab/newLab'
@@ -46,6 +45,9 @@ Rails.application.routes.draw do
   #Routs for Evals
   get 'evaluation/index'
   get 'evaluation/newEval'
+  get 'evaluation/assignedEval'
+  get 'evaluation/labEval', to: 'evaluation#labEval'
+  post 'evaluation/labEval', to: 'evaluation#create'
   post 'evaluation/newEval', to: "evaluation#create"
 
   #Routes for password
