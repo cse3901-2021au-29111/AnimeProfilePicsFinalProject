@@ -85,6 +85,7 @@ body {
     <%= link_to "Home", root_path %>
     <%= link_to "Student View", student_stdView_path %>
     <%= link_to "Team List", team_index_path %>
+    <%= link_to "Labs", lab_index_path %>
     
   </a>
      <% if logged_in? && @current_student.is_admin? %>
