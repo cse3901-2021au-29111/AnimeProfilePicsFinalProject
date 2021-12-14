@@ -1,6 +1,6 @@
 
   
-<h1>New Student</h1>
+<h1>New Admin</h1>
 
 <%=form_with(model: @student, url: student_newStd_path, local: true, method: "post") do |form| %>
   
@@ -31,16 +31,11 @@
       <%= form.label :password_confirmation, "Confirmation" %> <br>
       <%= form.password_field :password_confirmation, class: "form-control" %>
   </div>
-      <%= form.label :is_admin, "Is this an admin account?" %> <br>
-      <%= form.check_box :is_admin, class: "form-control" %>
-  <div>
-
-  </div>
 
     <br>
     <div>
       <%= form.submit "Create Account" %>
     </div>
 
-    <p>Existing user? <%= link_to "login now!", session_new_path %></p>
+    <p>Existing user? <%= link_to "Login Now!", session_new_path %></p>
 <% end %>

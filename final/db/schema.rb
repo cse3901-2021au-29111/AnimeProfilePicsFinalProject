@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_224309) do
+ActiveRecord::Schema.define(version: 2021_12_14_210917) do
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "evaluator_id"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_224309) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "nick"
-    t.integer "is_admin"
+    t.boolean "is_admin"
     t.string "email"
     t.string "password_digest"
     t.integer "section_id"
