@@ -91,6 +91,7 @@ body {
      <% if logged_in? && @current_student.is_admin? %>
   <a>
     <%= link_to "Roster List", roster_index_path %>
+    <%= link_to "Assign Labs", team_labs_index_path %>
   </a>
     <% end %>
     

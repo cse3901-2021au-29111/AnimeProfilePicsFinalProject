@@ -1,10 +1,31 @@
+<style>
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .styled-table tr {
+        text-align: center;
+    }
 
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+</style>
 <h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
 <% @teams = @current_student.teams %>
 <% if @teams.length()>0%>
-    <table>
+    <table class = "styled-table">
     <tr>
-        <th>Section</th>
+
         <th>Team</th>
         <th>Lab</th>
         <th>Evaluatee</th>
@@ -12,7 +33,6 @@
         <% @teams.each do |team| %>
             <% @tLabs = team.team_labs%>
             <% @tLabs.each do |lab|%>
-                <th><%=@current_student.section.sectionNum%></th>
                 <th><%=team.tName%></th>
                 <th>Lab #<%=lab.lab_id%></th>
                 <th>

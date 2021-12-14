@@ -5,7 +5,7 @@
 <ul>
   <% students.each do |student| %>
     <% if lab.evaluations.any? { |eval| eval.evaluator_id != student.id }%>
-      <li><%= student.fName %> <%= student.lName %></li>
+      <li><%= student.fname %> <%= student.lname %></li>
     <% end %>
   <% end %>
 </ul>
