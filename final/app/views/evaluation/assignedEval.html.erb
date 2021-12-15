@@ -21,7 +21,9 @@
                             <%=member.lname%>
 
                         <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
-                            <%= link_to "Edit Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+                            <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+                            <%a = a[0]%>
+                            <%= link_to "Edit Eval", "evalUpdate/#{a.id}"%>
                         <%else%>
                             <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
                         <%end%>

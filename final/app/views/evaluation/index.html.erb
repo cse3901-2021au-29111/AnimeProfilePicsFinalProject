@@ -1,20 +1,36 @@
 <h1>Evaluations</h1>
 <br>
-  <% @teams = Team.all %>
-   <% @teams.each do |team| %>
-    <h2><%= team.tName %></h2>
+<% @teams = Team.all %>
+<%if @teams.length() > 0%>
+  <% @teams.each do |team| %>
+    <h2>Team: <%= team.tName %></h2>
       <% @students = team.students %>
-      <% @students.each do |student| %>
-        <h3><%= student.fname + " " + student.lname %></h3>
-        <ul>
-          <% @evaluations = student.evaluations %>
-          <% @evaluations.each do |eval| %>
-          <li>
-            <%= eval.rating%>
-          </li>
-          <% end %>
-        </ul>
-      <% end %>
+      <%if @students.length()>0%>
+        <% @students.each do |student| %>
+          <h3><%= student.fname + " " + student.lname %></h3>
+          <ul>
+            <% @evaluations = student.evaluations%>
+            <%if @evaluations.length()>0%>
+              <% @evaluations.each do |eval| %>
+                <% if eval.evaluated_id == student.id%>
+                <li>
+                    Lab: <%= Lab.find(eval.lab_id).lab_name%> Score: <%= eval.rating%> From: <%=Student.find(eval.evaluator_id).fname%>
+                </li>
+                <%end%>
+              <% end %>
+            <%else%>
+              <li>This student has neither written nor receieved any evaluation</li>
+            <%end%>
+          </ul>
+        <% end %>
+      <%else%>
+      <ul>
+        <li>This team is empty</li>
+      </ul>
+      <%end%>
   <% end %>
+<%else%>
+  <h2> No team exist yet</h2>
+<%end%>
 <br>
 <%= link_to "Do Eval", evaluation_newEval_path %>

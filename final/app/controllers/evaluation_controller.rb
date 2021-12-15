@@ -44,14 +44,17 @@ class EvaluationController < ApplicationController
 
   def update
     @evaluation = Evaluation.find(params[:id])
-
-    if @evaluation.update(student_update)
+    student
+    if @evaluation.update(eval_update)
       redirect_to @evaluation,notice: "Update success"
     else
       flash.now[:notice] = "try again"
       render :edit
     end
   end
-
+  private
+  def eval_update
+    params.require(:evaluation).permit(:evaluator_id, :evaluated_id, :lab_id, :comment, :rating)
+  end
 end
 
