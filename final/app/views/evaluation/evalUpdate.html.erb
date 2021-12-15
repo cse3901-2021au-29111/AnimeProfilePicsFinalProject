@@ -1,0 +1,35 @@
+<h1>Do Evaluation</h1>
+<%=form_with(model: @evaluations, url: evaluation_labEval_path, local: true, method: "post")do |form| %>
+  <div>
+    <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+    <%a = a[0]%>
+    <p>Evaluator: <%=@current_student.fname%> <%=@current_student.lname%></p>
+    <p>Evaluatee: <%=Student.find(a.evaluatee_id).fname%> <%=Student.find(a.evaluatee_id).lname%></p>
+
+    <br>
+    <%= form.label :evaluator_id %><br>
+    <%= form.hidden_field :evaluator_id, :value => @evaluator%>
+
+    <br>
+    <%= form.label :evaluated_id %><br>
+    <%= form.hidden_field :evaluated_id, :value => @evaluatee%>
+
+    <br>
+    <%= form.label :lab_id %><br>
+    <%= form.hidden_field :lab_id, :value => @labID%>
+
+    <br>
+    <%= form.label :comment %><br>
+    <%= form.text_area :comment%>
+
+    <br>
+    <%= form.label :rating %><br>
+    <%= form.number_field :rating %>
+
+  </div>
+
+  <div>
+    <%= form.submit "Save"%>
+  </div>
+
+<% end %>
