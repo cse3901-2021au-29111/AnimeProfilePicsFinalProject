@@ -3,6 +3,7 @@ This is a peer evaluation tool. It needs to allow students evaluate their teamma
 
 Admin account: 123@123.com, pass: 123
 
+site link: https://animepfp-lab6.herokuapp.com/
 
 Admin accounts can be created just like a user.
 
