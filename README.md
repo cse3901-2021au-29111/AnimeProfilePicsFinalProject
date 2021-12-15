@@ -10,7 +10,8 @@ Rating number must be between 1 and 5.
 Admins can create teams, assign teams to students, and assign labs to teams.
 A student can be in more than one teams.
 A student can only see their own assigned team(s), admins can view all teams.
-Students can only give evaluations to themselves and assigned teammates.
+Admin can assign labs to teams, each lab will automatically create an evaluation for all applicable user.
+Students can only give evaluations to themselves and assigned teammates, each individual lab will have it's own evaluation assigned automatically.
 Only admins can view scores and comments.
 Admin can delete students, and other admins, but not their own account.
 Student can only edit their own profile, admins can't.
