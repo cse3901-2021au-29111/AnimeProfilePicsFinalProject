@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.postgresql
+  database: animepfp-lab6
+  username: Cameron Millar
+  password: <%= ENV['CAMERON_MILLAR_PASSWORD'] %>
