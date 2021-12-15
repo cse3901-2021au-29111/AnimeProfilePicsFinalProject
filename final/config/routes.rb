@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   get 'evaluation/newEval'
   get 'evaluation/assignedEval'
   get 'evaluation/labEval', to: 'evaluation#labEval'
-  get 'evaluation/evalUpdate/:id', to: 'evaluation#evalUpdate'
+  get 'evaluation/evalUpdate/:id', to: 'evaluation#edit'
   put 'evaluation/evalUpdate/:id', to: 'evaluation#update'
   post 'evaluation/labEval', to: 'evaluation#create'
   post 'evaluation/newEval', to: "evaluation#create"

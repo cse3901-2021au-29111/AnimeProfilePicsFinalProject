@@ -57783,3 +57783,658 @@ ActionView::Template::Error (undefined local variable or method `member' for #<A
   
 app/views/evaluation/evalUpdate.html.erb:4
 app/views/evaluation/evalUpdate.html.erb:2
+Started GET "/" for 127.0.0.1 at 2021-12-14 19:35:11 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 785)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8188)
+Completed 200 OK in 57ms (Views: 18.2ms | ActiveRecord: 0.9ms | Allocations: 23027)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:35:13 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1745)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1827)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 3321)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
+<% @teams = @current_student.teams %>
+<% if @teams.length()>0%>
+    <table>
+    <tr>
+        <th>Section</th>
+        <th>Team</th>
+        <th>Lab</th>
+        <th>Evaluatee</th>
+    </tr>
+        <% @teams.each do |team| %>
+            <% @tLabs = team.team_labs%>
+            <% @tLabs.each do |lab|%>
+                <th><%=@current_student.section.sectionNum%></th>
+                <th><%=team.tName%></th>
+                <th>Lab #<%=lab.lab_id%></th>
+                <th>
+                    <%team.students.each do |member|%>
+                            <%=member.fname%>
+                            <%=member.lname%>
+
+                        <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+                            <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+                            <%a = a[0]%>
+                            <%= link_to "Edit Eval", "evalUpdate/#{a.id}"(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+                        <%else%>
+                            <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+                        <%end%>
+                    <%end%>
+                </th>
+            <%end%>
+        <% end %>
+    </table>
+<%else%>
+    <h2>You are not enrolled in any teams!</h2>
+<%end%>
+
+<p><% #link_to "Do Eval", evaluation_newEval_path %></p>
+):
+1:    
+2:    <h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
+3:    <% @teams = @current_student.teams %>
+4:    <% if @teams.length()>0%>
+5:        <table>
+6:        <tr>
+7:            <th>Section</th>
+8:            <th>Team</th>
+9:            <th>Lab</th>
+10:            <th>Evaluatee</th>
+11:        </tr>
+12:            <% @teams.each do |team| %>
+13:                <% @tLabs = team.team_labs%>
+14:                <% @tLabs.each do |lab|%>
+15:                    <th><%=@current_student.section.sectionNum%></th>
+16:                    <th><%=team.tName%></th>
+17:                    <th>Lab #<%=lab.lab_id%></th>
+18:                    <th>
+19:                        <%team.students.each do |member|%>
+20:                                <%=member.fname%>
+21:                                <%=member.lname%>
+22:    
+23:                            <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+24:                                <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+25:                                <%a = a[0]%>
+26:                                <%= link_to "Edit Eval", "evalUpdate/#{a.id}"(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+27:                            <%else%>
+28:                                <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+29:                            <%end%>
+30:                        <%end%>
+31:                    </th>
+32:                <%end%>
+33:            <% end %>
+34:        </table>
+35:    <%else%>
+36:        <h2>You are not enrolled in any teams!</h2>
+37:    <%end%>
+38:    
+39:    <p><% #link_to "Do Eval", evaluation_newEval_path %></p>
+  
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:35:15 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1410)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1494)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms | Allocations: 3587)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
+<% @teams = @current_student.teams %>
+<% if @teams.length()>0%>
+    <table>
+    <tr>
+        <th>Section</th>
+        <th>Team</th>
+        <th>Lab</th>
+        <th>Evaluatee</th>
+    </tr>
+        <% @teams.each do |team| %>
+            <% @tLabs = team.team_labs%>
+            <% @tLabs.each do |lab|%>
+                <th><%=@current_student.section.sectionNum%></th>
+                <th><%=team.tName%></th>
+                <th>Lab #<%=lab.lab_id%></th>
+                <th>
+                    <%team.students.each do |member|%>
+                            <%=member.fname%>
+                            <%=member.lname%>
+
+                        <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+                            <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+                            <%a = a[0]%>
+                            <%= link_to "Edit Eval", "evalUpdate/#{a.id}"(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+                        <%else%>
+                            <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+                        <%end%>
+                    <%end%>
+                </th>
+            <%end%>
+        <% end %>
+    </table>
+<%else%>
+    <h2>You are not enrolled in any teams!</h2>
+<%end%>
+
+<p><% #link_to "Do Eval", evaluation_newEval_path %></p>
+):
+1:    
+2:    <h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
+3:    <% @teams = @current_student.teams %>
+4:    <% if @teams.length()>0%>
+5:        <table>
+6:        <tr>
+7:            <th>Section</th>
+8:            <th>Team</th>
+9:            <th>Lab</th>
+10:            <th>Evaluatee</th>
+11:        </tr>
+12:            <% @teams.each do |team| %>
+13:                <% @tLabs = team.team_labs%>
+14:                <% @tLabs.each do |lab|%>
+15:                    <th><%=@current_student.section.sectionNum%></th>
+16:                    <th><%=team.tName%></th>
+17:                    <th>Lab #<%=lab.lab_id%></th>
+18:                    <th>
+19:                        <%team.students.each do |member|%>
+20:                                <%=member.fname%>
+21:                                <%=member.lname%>
+22:    
+23:                            <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+24:                                <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+25:                                <%a = a[0]%>
+26:                                <%= link_to "Edit Eval", "evalUpdate/#{a.id}"(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+27:                            <%else%>
+28:                                <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+29:                            <%end%>
+30:                        <%end%>
+31:                    </th>
+32:                <%end%>
+33:            <% end %>
+34:        </table>
+35:    <%else%>
+36:        <h2>You are not enrolled in any teams!</h2>
+37:    <%end%>
+38:    
+39:    <p><% #link_to "Do Eval", evaluation_newEval_path %></p>
+  
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+Started GET "/student/16" for 127.0.0.1 at 2021-12-14 19:35:16 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:60
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 247)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 20488)
+Completed 200 OK in 42ms (Views: 33.0ms | ActiveRecord: 0.3ms | Allocations: 29079)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:35:18 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1410)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1493)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2463)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
+<% @teams = @current_student.teams %>
+<% if @teams.length()>0%>
+    <table>
+    <tr>
+        <th>Section</th>
+        <th>Team</th>
+        <th>Lab</th>
+        <th>Evaluatee</th>
+    </tr>
+        <% @teams.each do |team| %>
+            <% @tLabs = team.team_labs%>
+            <% @tLabs.each do |lab|%>
+                <th><%=@current_student.section.sectionNum%></th>
+                <th><%=team.tName%></th>
+                <th>Lab #<%=lab.lab_id%></th>
+                <th>
+                    <%team.students.each do |member|%>
+                            <%=member.fname%>
+                            <%=member.lname%>
+
+                        <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+                            <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+                            <%a = a[0]%>
+                            <%= link_to "Edit Eval", "evalUpdate/#{a.id}"(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+                        <%else%>
+                            <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+                        <%end%>
+                    <%end%>
+                </th>
+            <%end%>
+        <% end %>
+    </table>
+<%else%>
+    <h2>You are not enrolled in any teams!</h2>
+<%end%>
+
+<p><% #link_to "Do Eval", evaluation_newEval_path %></p>
+):
+1:    
+2:    <h1>Evaluations DashBoard - <%=@current_student.fname%></h1>
+3:    <% @teams = @current_student.teams %>
+4:    <% if @teams.length()>0%>
+5:        <table>
+6:        <tr>
+7:            <th>Section</th>
+8:            <th>Team</th>
+9:            <th>Lab</th>
+10:            <th>Evaluatee</th>
+11:        </tr>
+12:            <% @teams.each do |team| %>
+13:                <% @tLabs = team.team_labs%>
+14:                <% @tLabs.each do |lab|%>
+15:                    <th><%=@current_student.section.sectionNum%></th>
+16:                    <th><%=team.tName%></th>
+17:                    <th>Lab #<%=lab.lab_id%></th>
+18:                    <th>
+19:                        <%team.students.each do |member|%>
+20:                                <%=member.fname%>
+21:                                <%=member.lname%>
+22:    
+23:                            <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+24:                                <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+25:                                <%a = a[0]%>
+26:                                <%= link_to "Edit Eval", "evalUpdate/#{a.id}"(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+27:                            <%else%>
+28:                                <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+29:                            <%end%>
+30:                        <%end%>
+31:                    </th>
+32:                <%end%>
+33:            <% end %>
+34:        </table>
+35:    <%else%>
+36:        <h2>You are not enrolled in any teams!</h2>
+37:    <%end%>
+38:    
+39:    <p><% #link_to "Do Eval", evaluation_newEval_path %></p>
+  
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected '(', expecting ')'
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected tLABEL, expecting '='
+app/views/evaluation/assignedEval.html.erb:26: syntax error, unexpected ')', expecting end
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:35:49 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:4
+  [1m[36mTeamLab Load (0.3ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:14
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:19
+  [1m[36mEvaluation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:23
+  [1m[36mEvaluation Load (0.2ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 153.7ms | Allocations: 39254)
+  Rendered layout layouts/application.html.erb (Duration: 154.0ms | Allocations: 39334)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 4.4ms | Allocations: 40969)
+
+
+  
+ActionView::Template::Error (undefined method `evaluation_evalUpdate_path' for #<ActionView::Base:0x007f6cc101a6a0>
+Did you mean?  evaluation_newEval_path):
+    23:                         <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+    24:                             <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+    25:                             <%a = a[0]%>
+    26:                             <%= link_to "Edit Eval", evaluation_evalUpdate_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+    27:                         <%else%>
+    28:                             <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+    29:                         <%end%>
+  
+app/views/evaluation/assignedEval.html.erb:26
+app/views/evaluation/assignedEval.html.erb:19
+app/views/evaluation/assignedEval.html.erb:14
+app/views/evaluation/assignedEval.html.erb:12
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:36:57 -0500
+  
+NameError (undefined local variable or method `evaluation_newEval_path' for #<ActionDispatch::Routing::Mapper:0x00007f6cc4334068>):
+  
+config/routes.rb:50:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:37:46 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:4
+  [1m[36mTeamLab Load (0.8ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:14
+  [1m[36mSection Load (0.1ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:15
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:19
+  [1m[36mEvaluation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:23
+  [1m[36mEvaluation Load (0.2ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 126.8ms | Allocations: 32742)
+  Rendered layout layouts/application.html.erb (Duration: 127.1ms | Allocations: 32824)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 5.8ms | Allocations: 44248)
+
+
+  
+ActionView::Template::Error (undefined method `evaluation_evalUpdate_path' for #<ActionView::Base:0x007f6cc4342b18>
+Did you mean?  evaluation_newEval_path):
+    23:                         <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+    24:                             <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+    25:                             <%a = a[0]%>
+    26:                             <%= link_to "Edit Eval", evaluation_evalUpdate_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+    27:                         <%else%>
+    28:                             <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+    29:                         <%end%>
+  
+app/views/evaluation/assignedEval.html.erb:26
+app/views/evaluation/assignedEval.html.erb:19
+app/views/evaluation/assignedEval.html.erb:14
+app/views/evaluation/assignedEval.html.erb:12
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:38:07 -0500
+  
+NameError (undefined local variable or method `evaluation_evalUpdate_path' for #<ActionDispatch::Routing::Mapper:0x00005593f7efa340>):
+  
+config/routes.rb:50:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-12-14 19:43:06 -0500
+Processing by StudentController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 749)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.9ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4874)
+Completed 200 OK in 73ms (Views: 21.7ms | ActiveRecord: 18.3ms | Allocations: 16722)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:43:09 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:4
+  [1m[36mTeamLab Load (0.2ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:14
+  [1m[36mSection Load (0.1ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:15
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:19
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:23
+  [1m[36mEvaluation Load (0.3ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 128.6ms | Allocations: 32742)
+  Rendered layout layouts/application.html.erb (Duration: 129.0ms | Allocations: 32827)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 4.5ms | Allocations: 33940)
+
+
+  
+ActionView::Template::Error (undefined method `evaluation_evalUpdate_path' for #<ActionView::Base:0x007f6cc10b1528>
+Did you mean?  evaluation_newEval_path):
+    23:                         <% if Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id).exists?%>
+    24:                             <%a = Evaluation.where(evaluator_id: @current_student.id,evaluated_id: member.id, lab_id: lab.lab_id)%>
+    25:                             <%a = a[0]%>
+    26:                             <%= link_to "Edit Eval", evaluation_evalUpdate_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id)%>
+    27:                         <%else%>
+    28:                             <%= link_to "Start Eval", evaluation_labEval_path(evaluator_id: @current_student.id, evaluated_id: member.id, lab_id: lab.lab_id) %>
+    29:                         <%end%>
+  
+app/views/evaluation/assignedEval.html.erb:26
+app/views/evaluation/assignedEval.html.erb:19
+app/views/evaluation/assignedEval.html.erb:14
+app/views/evaluation/assignedEval.html.erb:12
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:45:50 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:4
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:14
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:15
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:19
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:23
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:23
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 20.9ms | Allocations: 5584)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 689)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 10250)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 1.1ms | Allocations: 11923)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:46:24 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:26
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:36
+  [1m[36mSection Load (0.1ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:37
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:41
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:45
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:45
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 20.9ms | Allocations: 5594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 689)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 10255)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 1.1ms | Allocations: 11911)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:46:26 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:26
+  [1m[36mTeamLab Load (0.4ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:36
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:37
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:41
+  [1m[36mEvaluation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:45
+  [1m[36mEvaluation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:45
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 25.3ms | Allocations: 5168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 213)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 8780)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 1.5ms | Allocations: 9778)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:46:57 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:26
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:36
+  [1m[36mSection Load (0.1ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE "sections"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:37
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:41
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:45
+  [1m[36mEvaluation Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:45
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 41.6ms | Allocations: 5592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 694)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 10260)
+Completed 200 OK in 70ms (Views: 62.6ms | ActiveRecord: 4.2ms | Allocations: 11913)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 19:47:27 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:26
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:35
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:39
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:43
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:43
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 17.7ms | Allocations: 4797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 689)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 9459)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 1.1ms | Allocations: 11116)
+
+
