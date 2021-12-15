@@ -14,7 +14,7 @@
               <% @evaluations.each do |eval| %>
                 <% if eval.evaluated_id == student.id%>
                 <li>
-                    Lab: <%= Lab.find(eval.lab_id).lab_name%> Score: <%= eval.rating%> From: <%=Student.find(eval.evaluator_id).fname%>
+                    Lab: <%= Lab.find(eval.lab_id).lab_name%> Score: <%= eval.rating%> Message: <%= eval.comment %> From: <%=Student.find(eval.evaluator_id).fname%>
                 </li>
                 <%end%>
               <% end %>
