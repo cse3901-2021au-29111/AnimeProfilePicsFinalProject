@@ -5,6 +5,7 @@ Admin account: 123@123.com, pass: 123
 
 
 Admin accounts can be created just like a user
+The password of each user will be hidden
 Rating number must be between 1 and 5
 Admins can create teams, assign teams to students, and assign labs to teams
 A student can be in more than one teams
