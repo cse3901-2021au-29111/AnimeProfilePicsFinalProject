@@ -12,6 +12,8 @@ default: &default
 development:
   <<: *default
   database: db/postgresql-encircled-92587
+  username: sgoyqexiajnjxc
+  password: 78448734afaa9e5cade4f6dab5b91d4470f04c9a08ac5eb543f124f73f8e61f6
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,7 +21,11 @@ development:
 test:
   <<: *default
   database: db/postgresql-encircled-92587
+  username: sgoyqexiajnjxc
+  password: 78448734afaa9e5cade4f6dab5b91d4470f04c9a08ac5eb543f124f73f8e61f6
 
 production:
   <<: *default
   database: db/postgresql-encircled-92587
+  username: sgoyqexiajnjxc
+  password: 78448734afaa9e5cade4f6dab5b91d4470f04c9a08ac5eb543f124f73f8e61f6
