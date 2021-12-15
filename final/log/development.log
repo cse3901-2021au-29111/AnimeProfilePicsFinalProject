@@ -59102,3 +59102,439 @@ Processing by EvaluationController#labEval as HTML
 Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.3ms | Allocations: 14611)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-14 20:06:59 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/index.html.erb within layouts/application
+  Rendered student/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 704)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 8078)
+Completed 200 OK in 51ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 15553)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-14 20:07:02 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 8.4ms | Allocations: 7784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 133)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 11215)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 11749)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-14 20:07:09 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:36
+  Rendered team/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 5229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 146)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 8744)
+Completed 200 OK in 30ms (Views: 22.3ms | ActiveRecord: 1.0ms | Allocations: 12920)
+
+
+Started GET "/lab/index" for 127.0.0.1 at 2021-12-14 20:07:10 -0500
+Processing by LabController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lab/index.html.erb within layouts/application
+  [1m[36mLab Load (0.2ms)[0m  [1m[34mSELECT "labs".* FROM "labs"[0m
+  ↳ app/views/lab/index.html.erb:31
+  Rendered lab/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 3218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 6757)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 1.1ms | Allocations: 9578)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-14 20:07:10 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:36
+  Rendered team/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 146)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4299)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 4737)
+
+
+Started GET "/student/stdView" for 127.0.0.1 at 2021-12-14 20:07:11 -0500
+Processing by StudentController#stdView as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/stdView.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/student/stdView.html.erb:36
+  Rendered student/stdView.html.erb within layouts/application (Duration: 24.1ms | Allocations: 7422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 132)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 10951)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 1.6ms | Allocations: 11481)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-14 20:07:11 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:36
+  Rendered team/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 146)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4277)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms | Allocations: 4715)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-14 20:07:12 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:36
+  Rendered team/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4264)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4701)
+
+
+Started GET "/team/index" for 127.0.0.1 at 2021-12-14 20:07:13 -0500
+Processing by TeamController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering team/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team/index.html.erb:36
+  Rendered team/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 137)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4275)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.2ms | Allocations: 4721)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-14 20:07:23 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 3.9ms | Allocations: 5431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 8857)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 9283)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2021-12-14 20:07:24 -0500
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4615)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 7340)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-14 20:07:26 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"123@123.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `create'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+Redirected to http://127.0.0.1:3000/evaluation/assignedEval
+Completed 302 Found in 219ms (ActiveRecord: 0.3ms | Allocations: 3624)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 20:07:26 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  [1m[36mTeamLab Load (0.2ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:34
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:38
+  [1m[36mEvaluation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 65.0ms | Allocations: 18394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 311)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 22006)
+Completed 200 OK in 83ms (Views: 72.8ms | ActiveRecord: 3.3ms | Allocations: 23502)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-14 20:09:05 -0500
+Processing by RosterController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:30
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:35
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/roster/index.html.erb:35
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/roster/index.html.erb:35
+  Rendered roster/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 7577)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 1.2ms | Allocations: 9110)
+
+
+Started GET "/team_labs/index" for 127.0.0.1 at 2021-12-14 20:09:08 -0500
+Processing by TeamLabsController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering team_labs/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/team_labs/index.html.erb:28
+  [1m[36mLab Load (0.2ms)[0m  [1m[34mSELECT "labs".* FROM "labs" INNER JOIN "team_labs" ON "labs"."id" = "team_labs"."lab_id" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/team_labs/index.html.erb:33
+  [1m[36mLab Load (0.1ms)[0m  [1m[34mSELECT "labs".* FROM "labs" INNER JOIN "team_labs" ON "labs"."id" = "team_labs"."lab_id" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/team_labs/index.html.erb:33
+  [1m[36mLab Load (0.1ms)[0m  [1m[34mSELECT "labs".* FROM "labs" INNER JOIN "team_labs" ON "labs"."id" = "team_labs"."lab_id" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/team_labs/index.html.erb:33
+  Rendered team_labs/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 5797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 251)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 9355)
+Completed 200 OK in 34ms (Views: 28.6ms | ActiveRecord: 0.8ms | Allocations: 10889)
+
+
+Started GET "/evaluation/index" for 127.0.0.1 at 2021-12-14 20:09:10 -0500
+Processing by EvaluationController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/evaluation/index.html.erb:4
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/evaluation/index.html.erb:8
+  [1m[36mEvaluation Load (0.3ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" INNER JOIN "labs" ON "evaluations"."lab_id" = "labs"."id" INNER JOIN "team_labs" ON "labs"."id" = "team_labs"."lab_id" INNER JOIN "teams" ON "team_labs"."team_id" = "teams"."id" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/views/evaluation/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/index.html.erb:8
+  [1m[36mEvaluation Load (0.2ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" INNER JOIN "labs" ON "evaluations"."lab_id" = "labs"."id" INNER JOIN "team_labs" ON "labs"."id" = "team_labs"."lab_id" INNER JOIN "teams" ON "team_labs"."team_id" = "teams"."id" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 15]]
+  ↳ app/views/evaluation/index.html.erb:13
+  [1m[36mLab Load (0.2ms)[0m  [1m[34mSELECT "labs".* FROM "labs" WHERE "labs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/evaluation/index.html.erb:17
+  [1m[36mEvaluation Load (0.3ms)[0m  [1m[34mSELECT "evaluations".* FROM "evaluations" INNER JOIN "labs" ON "evaluations"."lab_id" = "labs"."id" INNER JOIN "team_labs" ON "labs"."id" = "team_labs"."lab_id" INNER JOIN "teams" ON "team_labs"."team_id" = "teams"."id" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/index.html.erb:13
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/evaluation/index.html.erb:8
+  Rendered evaluation/index.html.erb within layouts/application (Duration: 60.6ms | Allocations: 16045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | Allocations: 19603)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 2.3ms | Allocations: 20734)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-14 20:09:11 -0500
+Processing by RosterController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:30
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:35
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/roster/index.html.erb:35
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/roster/index.html.erb:35
+  Rendered roster/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 251)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 7330)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 0.8ms | Allocations: 8342)
+
+
+Started GET "/roster/index" for 127.0.0.1 at 2021-12-14 20:09:16 -0500
+Processing by RosterController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering roster/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/roster/index.html.erb:30
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/roster/index.html.erb:35
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/roster/index.html.erb:35
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/roster/index.html.erb:35
+  Rendered roster/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 3666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 239)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 7308)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.8ms | Allocations: 8315)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 20:09:25 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:34
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:38
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  [1m[36mEvaluation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 24.0ms | Allocations: 4387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 238)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 8020)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 1.4ms | Allocations: 9017)
+
+
+Started GET "/student/16" for 127.0.0.1 at 2021-12-14 20:09:45 -0500
+Processing by StudentController#currentStd as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering student/currentStd.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/student/currentStd.html.erb:60
+  Rendered student/currentStd.html.erb within layouts/application (Duration: 3.6ms | Allocations: 946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 262)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.5ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4604)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 5702)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 20:09:47 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:34
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:38
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  [1m[36mEvaluation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 251)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 8038)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 1.0ms | Allocations: 9034)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-12-14 20:10:36 -0500
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+Redirected to http://127.0.0.1:3000/student/newStd
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 890)
+
+
+Started GET "/student/newStd" for 127.0.0.1 at 2021-12-14 20:10:36 -0500
+Processing by StudentController#newStd as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering student/newStd.html.erb within layouts/application
+  Rendered student/newStd.html.erb within layouts/application (Duration: 2.9ms | Allocations: 5432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 128)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 8858)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 9287)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2021-12-14 20:10:38 -0500
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 591)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4128)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 4579)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-12-14 20:11:24 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"123@123.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8:in `create'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+Redirected to http://127.0.0.1:3000/evaluation/assignedEval
+Completed 302 Found in 213ms (ActiveRecord: 0.2ms | Allocations: 1451)
+
+
+Started GET "/evaluation/assignedEval" for 127.0.0.1 at 2021-12-14 20:11:25 -0500
+Processing by EvaluationController#assignedEval as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `set_current_student'
+  Rendering layout layouts/application.html.erb
+  Rendering evaluation/assignedEval.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "rosters" ON "teams"."id" = "rosters"."team_id" WHERE "rosters"."student_id" = ?[0m  [["student_id", 16]]
+  ↳ app/views/evaluation/assignedEval.html.erb:25
+  [1m[36mTeamLab Load (0.1ms)[0m  [1m[34mSELECT "team_labs".* FROM "team_labs" WHERE "team_labs"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:34
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "rosters" ON "students"."id" = "rosters"."student_id" WHERE "rosters"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/evaluation/assignedEval.html.erb:38
+  [1m[36mEvaluation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 15], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  [1m[36mEvaluation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "evaluations" WHERE "evaluations"."evaluator_id" = ? AND "evaluations"."evaluated_id" = ? AND "evaluations"."lab_id" = ? LIMIT ?[0m  [["evaluator_id", 16], ["evaluated_id", 16], ["lab_id", 2], ["LIMIT", 1]]
+  ↳ app/views/evaluation/assignedEval.html.erb:42
+  Rendered evaluation/assignedEval.html.erb within layouts/application (Duration: 18.9ms | Allocations: 4384)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 238)
+  Rendered layouts/_formstyle.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 8017)
+Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 1.3ms | Allocations: 9015)
+
+
